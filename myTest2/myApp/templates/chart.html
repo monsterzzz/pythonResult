@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <script src="https://img.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/data.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/drilldown,js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+<h1>图表</h1>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <script>
+   $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '品牌家具销量表'
+        },
+        subtitle: {
+            text: '数据来源: wangshu.com'
+        },
+        xAxis: {
+            categories: [
+               {% for name in brand_name %}
+                                "{{name}}",
+               {% endfor %}
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            alternateGridColor: '#FDFFD5',
+            title: {
+                text: '销量 (件)'
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '家具销量',
+            data: {{fur_number}}
+        }]
+    });
+});
+    </script>
+</body>
+</html>
