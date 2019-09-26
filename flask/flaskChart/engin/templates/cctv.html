@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for i in cctvList %}
+<div class="col-sm-6 col-md-2">
+    <div class="thumbnail">
+
+            <img src="{{ i.avatar }}" alt="...">
+            <div class="caption" style="margin: 0px;padding-bottom:0px ">
+               
+                <p style="margin-top:0px;margin-bottom: 0px;font-size: 18px">{{ i.name }} : {{ i.port }}</p>
+               
+            </div>
+
+       
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

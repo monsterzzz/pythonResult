@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="main" style="height:400px;"></div>
+<div id="send" style="text-align: center;">
+
+</div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+
+    $("#main").css({
+        "height":window.innerHeight * 2 / 3
+    })
+    var myChart = echarts.init(document.getElementById('main'));
+
+    function getCharts(){
+        file = window.location.pathname.split("/")
+        file = file[file.length-1]
+        $.ajax({
+            method:"POST",
+            url:"/charts/" + file,
+            success:function(res){
+                myChart.setOption(res);
+                if(res.warning){
+                    $.ajax({
+                        method:"GET",
+                        url:"/send",
+                        success:function(res2){
+                            var msg = "<p>最小阈值: " + res.minDoor + "    最大阈值:" + res.maxDoor + "</p><p>超过阈值！已经发送警告到 </p>"
+                            for(var i = 0;i<res2.length;i++){
+                                var tmp = "<p>" + res2[i].name + "  " + "手机: " + res2[i].number + "  " + "邮箱: " + res2[i].email + "</p>"
+                                msg += tmp
+                            }
+                           
+                            $("#send").html(msg)
+                            
+                        }
+                    })
+                }
+            },
+            error:function(e){
+                console.log(e)
+            }
+        })
+    }
+    getCharts()
+    
+</script>
+
+{% endblock %}

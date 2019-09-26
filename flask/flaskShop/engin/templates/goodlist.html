@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    a:link{
+        color: black;
+        text-decoration: none;
+    }
+</style>
+<div class="col-lg-8 col-lg-offset-2">
+    {% for i in goodList %}
+            <div class="col-sm-6 col-md-2" >
+                <div class="thumbnail">
+                    <div onclick="addToCart('{{ i.id }}','{{ i.name }}')">
+                        <a href="javascript:void(0)">
+                            <img src="{{ i.avatar }}" alt="...">
+                            <div class="caption" style="margin: 0px">
+                                <p style="text-align: left;font-size: 16px;margin: 0px;color: #F40"><strong> ¥
+                                        {{ i.price }}.00
+                                    </strong></p>
+                                <p style="margin-top:10px;margin-bottom: 0px">{{ i.name }}</p>
+                                <p style="margin-top:10px;margin-bottom: 0px;font-size: 10px">{{ i.description }}</p>
+                            </div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+    {% endfor %}
+</div>
+
+<script>
+    function addToCart(id,name){
+        flag = confirm("确认将 " + name + " 加入购物车吗?")
+        if(flag){
+            $.ajax({
+                method:"post",
+                url:"/cart/add/" + id,
+                success:function(res){
+                    console.log(res)
+                },
+                error:function(e){
+                    console.log(e)
+                }
+            })
+        }
+    }
+</script>
+{% endblock %}
+

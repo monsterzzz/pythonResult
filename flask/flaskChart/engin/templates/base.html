@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flask-shop</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid" style="margin: 0px;padding: 0px">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="row" style="margin-top:40px;margin-left: 0px;margin-right: 0px">
+                <div class="col-lg-1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/index">首页</a></li>
+                        <li class="list-group-item"><a href="/charts/ph">ph曲线</a></li>
+                        <li class="list-group-item"><a href="/charts/bod">bod曲线</a></li>
+                        <li class="list-group-item"><a href="/charts/cod">cod曲线</a></li>
+                        {% if session.get("id") %}
+                        <li class="list-group-item"><a href="/logout">退出登录</a></li>    
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="col-lg-10">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="/static/js/bootstrap.min.js"></script>
+
+</html>
