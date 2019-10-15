@@ -1,0 +1,7 @@
+Name,x-coordinate,y-coordinate,x-speed,y-speed
+Service Ship,0,0,15,0
+HMS Illustrious,10,10,3,-1
+HMS Westminster,5,-10,5,5
+HMS Nottingham,30,0,1,-6
+HMS Ark Roya,50,-66,-3,1
+A dinghy,-33,-33,5,4
