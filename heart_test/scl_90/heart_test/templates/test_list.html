@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        .table tbody tr td{
+            vertical-align: middle !important;
+        }
+        .table th{
+            vertical-align: middle !important;
+        }
+    </style>
+</head>
+<script src="/static/js/echarts.min.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/test_list/">问卷列表</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+                <ul class="nav navbar-nav navbar-right" id="user_ctrl">
+                    <li><a href="/user_msg/">个人信息</a></li>
+                    <li><a href="/log_out/">注销</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    <div class="container-fluid" >
+        <div class="col-lg-offset-2 col-lg-8" style="margin-top:2%">
+            <h1 class="text-center">测试列表</h1>
+            <table class="table table-bordered" style="word-break:break-all; word-wrap:break-all; margin-top: 3%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th class="text-center" >问卷</th>
+                        <th class="text-center" >描述</th>
+                        <th class="text-center" >测试</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    {% for question in questions %}
+                        <th class="text-center" >{{ forloop.counter }}</th>
+                        <td class="text-center" >{{ question.q_name }}</td>
+                        <td title="{{ question.q_des }}" class="text-center">{{ question.sort_des }}</td>
+                        <td><a class="btn btn-default col-lg-offset-2 col-lg-8" href="/question_list/?question_name={{question.q_name}}" >测试</a></td>
+                    {% endfor %}
+                    </tr>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script>
+</script>
+</html>

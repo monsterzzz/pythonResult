@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/echarts.min.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/test_list/">问卷列表</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right" id="user_ctrl">
+                <li><a href="/log_out/">注销</a></li>
+            </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="btn_li" class="col-sm-2" >
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation" class="active"><a class="btn btn-dafault" name="all">所有</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="boy">男</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="girl">女</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="danqin">单亲</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="budanqin">不单亲</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="city">城镇</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="uncity">乡村</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="unmarry">未婚</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="marryed">已婚</a></li>
+                    <li role="presentation"><a class="btn btn-dafault" name="marryoff">离异</a></li>
+                </ul>
+            </div>
+            <div id="main" class="col-sm-10" style="height:400px">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+    var all_people = 0
+    var var_map = {
+        躯体化 : "qutihua",
+        强迫 : "qiangbo",
+        人际敏感 : "renjimingan",
+        抑郁 :"yiyu",
+        焦虑 : "jiaolv",
+        敌对 : "didui",
+        恐怖 : "kongbu",
+        偏执 : "pianzhi",
+        精神病 : "jingshenbing"
+    }
+    function get_data(parma){
+        $.ajax({
+            type:"GET",
+            url : "/teacher_ctrl_data/?parma=" + parma,
+            success:function(data){
+                data = JSON.parse(data)
+                console.log(data)
+                var option = {
+                    title: {
+                        text: 'Scl-90 总数据汇总(总人数:'+ all_people.toString() + ')',
+                        left:'center'
+                    },
+                    tooltip: {},
+                    legend: {
+                        data:['健康人数','异常人数'],
+                        top : 'bottom'
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            axisTick: {show: false},
+                            data: []
+                        }
+                    ],
+                    yAxis: {},
+                    series: [
+                    {
+                        name: '健康人数',
+                        type: 'bar',
+                        barGap: 0,
+                        data: []
+                    },
+                    {
+                        name: '异常人数',
+                        type: 'bar',
+                        data: []
+                    }]
+                };
+                for(x in data){
+                    
+                    option.xAxis[0].data.push(x)
+                    option.series[0].data.push(data[x].health)
+                    option.series[1].data.push(data[x].ill)
+                }
+                if(parma == "all"){
+                    all_people = data.躯体化.health + data.躯体化.ill
+                    option.title.text = 'Scl-90 总数据汇总(总人数:'+ all_people.toString() + ')'
+                }
+                myChart.setOption(option);
+            }
+        })
+    }
+    myChart.on("click",function(parma){
+         msg = parma.name + parma.seriesName +"占总的百分比为 : " + (((parma.value / all_people) * 100).toFixed(2)).toString() + "%" 
+        alert(msg)
+    })
+
+    $("document").ready(function(){
+        get_data('all')
+    })
+    $("#btn_li li a").click(function(){
+        get_data($(this).attr("name"))
+        a_li = $("#btn_li li")
+        //console.log(a_li)
+        for(var i=0;i<a_li.length;i++){
+            $(a_li[i]).removeClass("active")
+        }
+        $(this).parent().addClass("active")
+        
+    })
+</script>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/echarts.min.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/test_list/">问卷列表</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+                    <ul class="nav navbar-nav navbar-right" id="user_ctrl">
+                        <li><a href="/user_msg/">个人信息</a></li>
+                        <li><a href="/log_out/">注销</a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+    <div class="container-fluid" >
+        <div id="main" class="col-lg-offset-2 col-lg-8" style="height:400px;margin-top:1%" ></div>
+        
+        </div>
+        <div id="detail" class="col-lg-offset-2 col-lg-8" style="margin-top:1%">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>特征因子</th>
+                        <th>选项</th>
+                        <th>您的答案</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody id = "t_body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+
+</body>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    
+    var aid = window.location.href.split("?")[1].split("=")[1]
+
+    function in_array(x,arr){
+        arr = arr.join(",")
+        return arr.indexOf(","+ x +",") !=-1; 
+    }
+
+    function make_table(json_data){
+        var result = ""
+        for(x in json_data){
+            //console.log(json_data[x].project,json_data[x].project.join(","))
+            try{
+                var project = ""
+                for(s in json_data[x].project){
+                    project += json_data[x].project[s].toString() + ","
+                }
+                project = project.substr(0,project.length-1)
+                var answer = ""
+                for(s in json_data[x].answer){
+                    answer += json_data[x].answer[s].toString() + ","
+                }
+                answer = answer.substr(0,answer.length-1)
+                var is_health = ""
+                if(json_data[x].is_health){
+                    is_health = "<p style='color:#3f9337;margin:0px'>健康</p>"
+                }else{
+                    is_health = "<p style='color:#eb4310;margin:0px'>异常</p>"
+                }
+                idx = parseInt(x) + 1
+                idx = idx.toString()
+               // console.log(answer)
+                var t_body = "<tr><th scope='row'>"+ idx +"</th><td>"+ json_data[x].point +"</td><td>"+ project +"</td><td>"+ answer +"</td><td>"+ is_health +"</td></tr>"
+                result += t_body
+            }catch(e){
+                console.log(e)
+            }
+            
+        }
+        return result
+    }
+
+    $("document").ready(function(){
+        $.ajax({
+            type : "GET",
+            url : "/get_anls_item/?aid=" + aid.toString(),
+            success:function(data){
+                data = JSON.parse(data)
+                $("#t_body").html(make_table(data))
+                var option = {
+                    title: {
+                        text: 'Scl-90 测试数据展示',
+                        left:'center'
+                    },
+                    tooltip: {},
+                    legend: {
+                        data:[],
+                        top : 'bottom'
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            axisTick: {show: false},
+                            data: []
+                        }
+                    ],
+                    yAxis: {},
+                    series: [
+                    {
+                        name: '平均分',
+                        type: 'bar',
+                        barGap: 0,
+                        data: []
+                    },
+                    {
+                        name: '评价标准',
+                        type: 'bar',
+                        data: []
+                    }]
+                };
+                y_bar = ["pinjun","biaozhun"]
+                y_map = {
+                    pinjun : "平均分",
+                    biaozhun: "评价标准"
+                }
+                option.legend.data = ["平均分","评价标准"]
+                for(x in data){
+                    console.log(data[x].point)
+                    option.xAxis[0].data.push(data[x].point)
+                    for(key in y_bar){
+                        console.log(key,y_bar,y_bar[key])
+                        option.series[key].data.push(data[x][y_bar[key]])
+                    }
+                }
+                myChart.setOption(option);
+
+            }
+        })
+    })
+
+    // 使用刚指定的配置项和数据显示图表。
+    //myChart.setOption(option);
+</script>
+</html>

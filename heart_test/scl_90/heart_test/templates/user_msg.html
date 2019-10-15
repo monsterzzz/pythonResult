@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/echarts.min.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/test_list/">问卷列表</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right" id="user_ctrl">
+                <li><a href="/user_msg/">个人信息</a></li>
+                <li><a href="/log_out/">注销</a></li>
+            </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid" >
+        <div id="main" class="col-lg-offset-2 col-lg-8" style="height:400px;margin-top:1%" ></div>
+        <div id="button_area" class="col-lg-offset-2 col-lg-8">
+            <button class="btn btn-default" type="button" id="last_btn" style="display:none">上一页</button>
+            <button class="btn btn-default" type="button" id="next_btn" style="display:none">下一页</button>
+        </div>
+        <div id="detail" class="col-lg-offset-2 col-lg-8" style="margin-top:1%">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>答题时间</th>
+                        <th>问卷名</th>
+                        <th>总分</th>
+                        <th>平均分(共90个项目)</th>
+                        <th>详情</th>
+                    </tr>
+                </thead>
+                <tbody id = "t_body">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div >
+
+        </div>
+        <div id="msg" class="col-lg-offset-2 col-lg-8" style="height:400px;margin-top:4%;display:none;"  >
+            <div>
+                <div class="col-lg-offset-2 col-lg-8" ><h1 class="col-lg-offset-2 col-lg-8 text-center" >您没有进行过任何测试!</h1></div>
+                <div class="col-lg-offset-2 col-lg-8" style="margin-top:3%"><a class="btn btn-default col-lg-offset-2 col-lg-8" href="/test_list/" >现在就去测试</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div>
+        {% for item in question_list %}
+        <li>
+            <span style="display:none"> {{ item.qid }} </span>
+            <span title="{{ item.q_des }}"> {{ forloop.counter }} </span>
+            <span title="{{ item.q_des }}"> {{ item.q_name }} </span>
+            <span> {{ item.all_score }} </span>
+            <span> {{ item.pinjun_score }} </span>
+            <a href="/show_anls/?aid={{item.aid}}">查看详情</a>
+        </li>
+        {% endfor %}
+    </div> -->
+</body>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+    var current_idx = 0
+    function make_table(json_data){
+        var result = ""
+        for(x in json_data){
+            //console.log(json_data[x].project,json_data[x].project.join(","))
+            try{
+                var idx = (parseInt(x) + 1).toString()
+                var answer_time = json_data[x].a_date
+                var question_name = json_data[x].q_name
+                var all_score = json_data[x].all_score
+                var pinjunfen = json_data[x].pinjun_score
+                var aid = json_data[x].aid
+               // console.log(answer)
+               var deatil = [answer_time,question_name,all_score,pinjunfen]
+               var tb_string = ""
+               var th_str =  "<tr><th scope='row' style='vertical-align: middle;'>"+ idx +"</th>"
+               tb_string += th_str
+               for(detail_idx in deatil ){
+                   var td_str = "<td style='vertical-align: middle;'>"+ deatil[detail_idx] +"</td>"
+                   tb_string += td_str
+               }
+               tb_string += '<td><a class="btn btn-default col-lg-12"  href="/show_anls/?aid='+ aid.toString() +'">查看详情</a> </td>'
+               result += tb_string
+            }catch(e){
+                console.log(e)
+            }
+            
+        }
+        result += "</tr>"
+        return result
+    }
+    function btn_show(has_next,current_idx){
+        console.log(has_next,current_idx)
+        if(current_idx == 0){
+            $("#last_btn").hide()
+            if(has_next){
+                $("#next_btn").show()
+            }else{
+                $("#next_btn").hide()
+            }
+        }else{
+            $("#last_btn").show()
+            if(has_next){
+                $("#next_btn").show()
+            }else{
+                $("#next_btn").hide()
+            }
+        }
+    }
+    function get_seven_answer(idx){
+        $.ajax({
+            type : "GET",
+            url : "/get_seven_answer/?idx=" + idx.toString(),
+            success : function(data){
+                data = JSON.parse(data)
+                $("#t_body").html(make_table(data.msg))
+                var option = {
+                    xAxis: {
+                        type: 'category',
+                        data: []
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    legend : {
+                        data:["总分"]
+                    },
+                    series: [{
+                        data: [],
+                        type: 'line',
+                        itemStyle : { normal: {label : {show: true}}}
+                    }]
+                };
+                if(data.code == 400){
+                    btn_show(data.has_next,current_idx)
+                    for(x in data.msg){
+                        option.series[0].data.push(data.msg[x].all_score)
+                        option.xAxis.data.push((parseInt(x)+1).toString())
+                    }
+                    myChart.setOption(option);
+                }else{
+                    $("#main").hide()
+                    $("#detail").hide()
+                    $("#msg").show()
+                }
+                
+                //console.log(data)
+            },
+            error: function(data){
+                console.log(data)
+            }
+        })
+    }
+    $("document").ready(function(){
+        get_seven_answer(current_idx)
+    })
+    $("#last_btn").click(function(){
+        current_idx -= 1
+        get_seven_answer(current_idx)
+    })
+    $("#next_btn").click(function(){
+        current_idx += 1
+        get_seven_answer(current_idx)
+    })
+</script>
+</html>

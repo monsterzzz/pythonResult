@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/echarts.min.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/test_list/">问卷列表</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+                <ul class="nav navbar-nav navbar-right" id="user_ctrl">
+                    <li><a href="/user_msg/">个人信息</a></li>
+                    <li><a href="/log_out/">注销</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    <div class="container-fluid" >
+        <div class="col-lg-offset-3 col-lg-6" style="margin-top:2%">
+            <h1 id="q_name" class="text-center">Scl-90 问题列表</h1>
+            <form id="question_form"  class="form-horizontal" style="margin-top:3%">
+                <ul id="question_list" class="list-group">
+                    
+                        
+                </ul>
+               
+            </form>
+            <div class="col-lg-offset-2 col-lg-8" style="margin-bottom:50px">
+                <button id="next_btn" type="button" class="btn btn-default center-block">下一页</button>
+                <button id="submit_btn" type="button" style="display:none" class="btn btn-default center-block">提交</button>
+            </div>
+        </div> 
+       
+    </div>
+    
+    
+</body>
+<script>
+    var current_page = 0 
+    var question_name = window.location.href.split("?")
+    question_name = question_name[question_name.length - 1].split("=")
+    question_name = question_name[question_name.length - 1]
+    var all_choice = []
+    $(document).ready(function(){
+        get_question(question_name,current_page)
+    })
+
+    $("#submit_btn").click(function(){
+        $.ajax({
+            type:"POST",
+            
+        })
+    })
+
+    function jsp_temp(question_json){
+        //console.log(question_json)
+        var jsp_str_header = "<li class='list-group-item'><div class='form-group' style='margin-left:10px'><p style='margin-top:20px'><span>"+ question_json.pid +".</span>"+ question_json.header +"</p>"
+        var jsp_str_input = ""
+        var random = Math.floor(Math.random()*5) 
+        console.log(random) 
+        for(var i = 0;i<question_json.opt_list.length;i++){
+            var input_name = "question" + question_json.pid.toString()
+            var input_str = '<label style="margin-right:50px" class="radio-inline"><input  type="radio" requierd  name="'+ input_name + '" id="'+ 'id_' + input_name +'" value="'+ (i+1).toString() +'">'+ question_json.opt_list[i] +' </label>'
+            if(i == random){
+                input_str = '<label style="margin-right:50px" class="radio-inline"><input type="radio" requierd checked="checked" name="'+ input_name + '" id="'+ 'id_' + input_name +'" value="'+ (i+1).toString() +'">'+ question_json.opt_list[i] +' </label>'
+            }
+            jsp_str_input += input_str
+        }
+        var jsp_str_end = "</div></li>"
+        result_str = jsp_str_header + jsp_str_input + jsp_str_end
+        return result_str
+    }
+
+    function get_question(question_name,current_page){
+        var url = "../get_ten_question/?q_name=" + question_name + "&q_index=" + current_page.toString()
+        $.ajax({
+            type:"get",
+            url :url,
+        // data : {
+        //     q_name : question_name,
+        //     q_index : current_page.toString()
+        // },
+        success : function(data){
+            data = JSON.parse(data) 
+            question_data = data.msg
+            var all_str = ""
+            for(var i = 0;i < question_data.length ;i++){
+                try{
+                    all_str += jsp_temp(question_data[i])
+                }catch(e){
+                    console.log(e)
+                }
+                //break
+            }
+            $("#question_list").html(all_str)
+            if(data.is_end == true){
+                $("#next_btn").hide()
+                $("#submit_btn").show()
+            }
+            
+        },
+        error:function(data){
+            console.log(data)
+        } 
+    })
+    }
+
+    $("#next_btn").click(function(){
+        if($("#question_form").serialize().split("&").length != 10){
+            alert("请填写所有问题!")
+        }else{
+            var radio_data = $("#question_form").serialize().split("&")
+            for(item in radio_data){
+                var question_json = {
+                    pid : Number(radio_data[item].split("=")[0].replace("question","")),
+                    p_ans : Number(radio_data[item].split("=")[1])
+                }
+                all_choice.push(question_json)
+            }
+            current_page += 1
+            get_question(question_name,current_page)
+        }
+        console.log(all_choice)
+    })
+    $("#submit_btn").click(function(){
+        if($("#question_form").serialize().split("&").length != 10){
+            alert("请填写所有问题!")
+        }else{
+            var radio_data = $("#question_form").serialize().split("&")
+            for(item in radio_data){
+                var question_json = {
+                    pid : Number(radio_data[item].split("=")[0].replace("question","")),
+                    p_ans : Number(radio_data[item].split("=")[1])
+                }
+                all_choice.push(question_json)
+            }
+            data = {
+                "answer" : all_choice,
+                "qid" : window.location.href.split("?")[1].split("=")[1]
+            }
+            data = JSON.stringify(data)
+            console.log(data)
+            $.ajax({
+                type:"POST",
+                url : "/add_answer/",
+                data : data,
+                success : function(data){
+                    data = JSON.parse(data)
+                    if(data.code == 300){
+                        window.location = "/answer_list/"
+                    }else{
+                        alert("提交失败,请重试")
+                    }
+                }
+            })
+        }
+    })
+</script>
+</html>
