@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        .table th, .table td { 
+        text-align: center;
+        vertical-align: middle!important;
+        }
+    </style>
+</head>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+    <form id="sign">
+        <input type="text" name="name">
+        <input type="password" name="password">
+        
+    </form>
+    <button id="sign_btn">sign</button>
+</body>
+<script>
+    $("#sign_btn").click(function(){
+        console.log($("#sign").serialize())
+        $.ajax({
+            type:"POST",
+            url :"/sign_in/",
+            data: $("#sign").serialize(),
+            success:function(data){
+                console.log(data)
+            }
+        })
+    })
+</script>
+</html>

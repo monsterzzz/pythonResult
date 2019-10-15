@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        .table th, .table td { 
+        text-align: center;
+        vertical-align: middle!important;
+        }
+    </style>
+</head>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-sm-12" style="margin-top: 30px">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="text" id="search_input" class="form-control" aria-label="..." placeholder="搜索用户...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">通过...<span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a onclick="searchUser('uid')">uid</a></li>
+                            <li><a onclick="searchUser('card_id')">card_id</a></li>
+                            <li><a onclick="searchUser('name')">名字</a></li>
+                            <li><a onclick="searchUser('student_id')">学号</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-12">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            {% for i in head %}
+                            <th>{{ i }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in result %}
+                        <tr id="tr_{{ i.bid }}">
+                            <th scope="row"> {{ forloop.counter }}</th>
+                            <td>{{ i.uid }}</td>
+                            <td>{{ i.name }}</td>
+                            <td>{{ i.student_id }}</td>
+                            <td>{{ i.card_id }}</td>
+                            <td>{{ i.address }}</td>
+                            <td id="power_{{i.uid}}">{{ i.junshi }}</td>
+                            <td>
+                                <button class="btn btn-default btn-sm" type="button" onclick="change_power({{i.uid}},1)">
+                                    提权
+                                </button>
+                                <button class="btn btn-default btn-sm" type="button" onclick="change_power({{i.uid}},0)">
+                                    降权
+                                </button>
+                                <button class="btn btn-default btn-sm" id="" type="button" onclick="removeUser({{i.uid}})">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+                <div id="pages" class="text-center">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="step-links">
+                                {% if result.has_previous %}
+                                <a class='active' href="?page={{ result.previous_page_number }}">上一页</a>
+                                {% endif %}
+
+                                <span class="current">
+                                    Page {{ result.number }} of {{ result.paginator.num_pages }}</span>
+
+                                {% if result.has_next %}
+                                <a class='active' href="?page={{ result.next_page_number }}">下一页</a>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+</body>
+<script>
+
+    function searchUser(type) {
+        window.location.href = "http://" + window.location.host + "/admin/user_set/?user_type=" + type + "&word=" + $("#search_input").val()
+    }
+
+    function change_power(uid, p) {
+        $.ajax({
+            type: "GET",
+            url: "/admin_contorl/user/change_power/?uid=" + uid + "&p=" + p,
+            success: function (data) {
+                console.log(data)
+                if (data == "no1") {
+                    alert("不能改变权限!")
+                } else if (data == "no2") {
+                    alert("其他错误!")
+                } else if (data == "yes") {
+                    alert("改变权限成功!")
+                    $("#power_" + uid).html(p.toString())
+
+                } else {
+                    alert("xxxx")
+                }
+            }
+        })
+    }
+
+    function removeUser(uid) {
+        if (!confirm("确定删除该用户?")) {
+            return
+        }
+        $.ajax({
+            type: "GET",
+            url: "/admin_contorl/user/remove/?uid=" + uid,
+            success: function (data) {
+                console.log(data)
+                if (data == "yes") {
+                    alert("删除用户成功!")
+                    window.location.reload()
+                } else {
+                    alert("删除失败")
+                }
+            }
+        })
+    }
+
+</script>
+
+</html>

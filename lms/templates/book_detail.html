@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ book.name }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<body>
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/book_index/">
+                    <p>书籍列表</p>
+                </a>
+            </div>
+            <p class="navbar-text navbar-right" style="margin-right:30px"><a href="/log_out/" class="navbar-link">注销</a></p>
+            <p class="navbar-text navbar-right"><a href="/user_msg/" class="navbar-link">借书纪录</a></p>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1 class="col-sm-offset-3">{{ book.name }}</h1>
+        </div>
+        <div class="col-sm-offset-3 col-sm-2 ">
+            <div class="thumbnail">
+                <img src="{{ book.img_path }}">
+            </div>
+            <p>图书名称 : {{ book.name }}</p>
+        </div>
+        <div class="col-sm-4">
+            <ul class="list-group">
+                <input type="text" value="{{ book.bid }}" id="bid" style="display:none">
+                <li class="list-group-item">
+                    <p>图书id : {{ book.bid }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>名称 : {{ book.name }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>isbn_id : {{ book.isbn_id }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>类型 : {{ book.b_type }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>作者 : {{ book.auther }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>出版社 : {{ book.publisher }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>价格 : {{ book.price }}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">图书简介</h3>
+                </div>
+                <div class="panel-body">
+                    {{ book.descri }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="col-sm-6 col-sm-offset-3">
+                {% if book.can_lend >= 1 %}
+                    {% if book.b_type == "军事" %}
+                        {% if request.session.user.junshi == 1 %}
+                            <button type="button" id="lend" class="btn btn-primary btn-lg btn-block">借书</button>
+                        {% else %}
+                            <button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled">不可借</button>
+                        {% endif %}
+                    {% else %}
+                        <button type="button" id="lend" class="btn btn-primary btn-lg btn-block">借书</button>
+                    {% endif %}
+                {% else %}
+                    <button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled">不可借</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("#lend").click(function () {
+        var data = {
+            bid: $("#bid").val()
+        }
+        $.ajax({
+            type: "post",
+            url: "/lend_rest/lend/",
+            data: JSON.stringify(data),
+            success: function (data) {
+                if(data == "yes"){
+                    alert("借书成功")
+                }else{
+                    alert("借书失败")
+                }
+            }
+        })
+    })
+</script>
+
+</html>

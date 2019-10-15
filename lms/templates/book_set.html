@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        .table th, .table td { 
+        text-align: center;
+        vertical-align: middle!important;
+        }
+        .modal-backdrop {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+}
+    </style>
+</head>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-sm-12" style="margin-top: 30px">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="text" id="search_input" class="form-control" aria-label="..." placeholder="搜索图书...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">通过...<span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a onclick="searchBook('bid')">bid</a></li>
+                            <li><a onclick="searchBook('isbn_id')">isbn_id</a></li>
+                            <li><a onclick="searchBook('name')">书名</a></li>
+                            <li><a onclick="searchBook('auther')">作者</a></li>
+                            <li><a onclick="searchBook('pub')">出版社</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-sm-2 col-sm-offset-6">
+                <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#addbook">图书入库</button>
+            </div>
+            <div class="modal fade bs-example-modal-lg" id="addbook" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                添加图书
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-3 col-sm-offset-2">
+                                    <a href="#" class="thumbnail">
+                                        <img src="/MEDIA/pic/null.png" id="up_img" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <form class="form-horizontal" style="padding-top:23%" id="img_form" role="form">
+                                        <div class="form-group bottom">
+                                            <input type="file" name="img" onchange="upLoad()">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <form class="form-horizontal" id="book_msg" role="form">
+                                <div class="form-group">
+                                    <label for="uname" class="col-sm-2 control-label">图书名称</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="name" name="name" class="form-control well" placeholder="请输入图书名称" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upwd" class="col-sm-2 control-label">isbn_id</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="isbn_id" name="isbn_id" class="form-control well"
+                                            placeholder="请输入isbn_id" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upwd" class="col-sm-2 control-label">作者</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="auther" name="auther" class="form-control well"
+                                            placeholder="请输入作者" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upwd" class="col-sm-2 control-label">出版社</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="publisher" name="publisher" class="form-control well"
+                                            placeholder="请输入出版社" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upwd" class="col-sm-2 control-label">价格</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="price" name="price" class="form-control well"
+                                            placeholder="请输入价格" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upwd" class="col-sm-2 control-label">类型</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="b_type" name="b_type" class="form-control well"
+                                            placeholder="请输入类型" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upwd" class="col-sm-2 control-label">简介</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="descri" name="descri" class="form-control well"
+                                            placeholder="请输入类型" />
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display:none">
+                                    <label for="upwd" class="col-sm-2 control-label">img_path</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="img_path" name="img_path" class="form-control well"
+                                            value="/MEDIA/pic/null.jpg" placeholder="请输入img_path" />
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                            </button>
+                            <button type="button" id="add_btn" class="btn btn-primary">
+                                提交更改
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <div class="col-sm-12" style="margin-top:20px">
+                <div class="col-sm-2">
+                    <ul class="list-group">
+                        <!-- <a href="/admin/book_set/" class="list-group-item active"> 所有 </a> -->
+                        {% for i in type %}
+                        {% if i.is_act %}
+                        <a href="/admin/book_set/?book_type={{i.tid}}&page=1/" class="list-group-item active"> {{i.name}} </a>
+                        {% else %}
+                        <a href="/admin/book_set/?book_type={{i.tid}}&page=1/" class="list-group-item"> {{ i.name }}
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-sm-10">
+                    <table class="table table-striped ">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                {% for i in head %}
+                                <th>{{ i }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody id="t_body">
+                            {% for i in books %}
+                            <tr id="tr_{{ i.bid }}">
+                                <th scope="row"> {{ forloop.counter }}</th>
+                                <td>{{ i.isbn_id }}</td>
+                                <td>{{ i.name }}</td>
+                                <td>{{ i.auther }}</td>
+                                <td>{{ i.publisher }}</td>
+                                <td id="book_num_{{i.bid}}">{{ i.number }}</td>
+                                <td id="can_lend_{{i.bid}}">{{ i.can_lend }}</td>
+                                <td>
+                                    <button class="btn btn-default btn-sm" id="addnum" type="button" onclick="addnum({{i.bid}})">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </button>
+                                    <button class="btn btn-default btn-sm" id="" type="button" data-toggle="modal"
+                                        data-target="#edit_book_{{ i.bid }}">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    </button>
+                                    <div class="modal fade bs-example-modal-lg" id="edit_book_{{ i.bid }}" tabindex="-1"
+                                        role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-hidden="true">
+                                                        &times;
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">
+                                                        编辑图书
+                                                    </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-3 col-sm-offset-2">
+                                                            <a href="#" class="thumbnail">
+                                                                <img src="{{ i.img_path }}" id="up_{{ i.bid }}" alt="...">
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <form class="form-horizontal" style="padding-top:23%" id="img_form_{{ i.bid }}"
+                                                                role="form">
+                                                                <div class="form-group bottom">
+                                                                    <input type="file" name="img" onchange="UpdateUpLoad({{ i.bid }})">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+
+                                                    <form class="form-horizontal" id="book_msg_{{i.bid}}" role="form">
+                                                        <div class="form-group" style="display:none;">
+                                                            <label for="uname" class="col-sm-2 control-label">bid</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" name="bid" class="form-control well"
+                                                                    value="{{i.bid}}" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="uname" class="col-sm-2 control-label">图书名称</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="name" name="name" class="form-control well"
+                                                                    value="{{  i.name  }}" placeholder="请输入图书名称" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="upwd" class="col-sm-2 control-label">isbn_id</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="isbn_id" name="isbn_id" value="{{ i.isbn_id }}"
+                                                                    class="form-control well" placeholder="请输入isbn_id" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="upwd" class="col-sm-2 control-label">作者</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="auther" name="auther" class="form-control well"
+                                                                    value="{{ i.auther }}" placeholder="请输入作者" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="upwd" class="col-sm-2 control-label">出版社</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="publisher" name="publisher"
+                                                                    value="{{ i.publisher }}" class="form-control well"
+                                                                    placeholder="请输入出版社" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="upwd" class="col-sm-2 control-label">价格</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="price" name="price" class="form-control well"
+                                                                    value="{{ i.price }}" placeholder="请输入价格" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="upwd" class="col-sm-2 control-label">类型</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="b_type" name="b_type" class="form-control well"
+                                                                    value="{{ i.b_type }}" placeholder="请输入类型" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label for="upwd" class="col-sm-2 control-label">简介</label>
+                                                                <div class="col-sm-9">
+                                                                    <input type="text" id="descri" name="descri" class="form-control well" value="{{ i.descri }}"
+                                                                        placeholder="请输入类型" />
+                                                                </div>
+                                                            </div>
+                                                        <div class="form-group" style="display:none">
+                                                            <label for="upwd" class="col-sm-2 control-label">img_path</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" id="img_path_{{ i.bid }}" name="img_path"
+                                                                    class="form-control well" value="{{ i.img_path }}"
+                                                                    placeholder="请输入img_path" />
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                    </button>
+                                                    <button type="button" id="add_btn" class="btn btn-primary" onclick="UpdateBook({{i.bid}},{{ i.isbn_id }})">
+                                                        提交更改
+                                                    </button>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal -->
+                                    </div>
+                                    <button class="btn btn-default btn-sm" id="subbook" type="button" onclick="subBook({{ i.bid }})">
+                                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                    </button>
+                                    <button class="btn btn-default btn-sm" id="removebook" type="button" onclick="removeBook({{ i.bid }})">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <div id="pages" class="text-center">
+                        <nav>
+                            <ul class="pagination">
+                                <li class="step-links">
+                                    {% if books.has_previous %}
+                                    <a class='active' href="?page={{ books.previous_page_number }}">上一页</a>
+                                    {% endif %}
+
+                                    <span class="current">
+                                        Page {{ books.number }} of {{ books.paginator.num_pages }}</span>
+
+                                    {% if books.has_next %}
+                                    <a class='active' href="?page={{ books.next_page_number }}">下一页</a>
+                                    {% endif %}
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-sm-12" id="edit_box">
+
+            </div>
+        </div>
+</body>
+<script>
+
+    function searchBook(type) {
+        if ($("#search_input").val().replace(" ", "") == "") {
+            alert("请输入有效字符")
+        }
+        $.ajax({
+            type: "GET",
+            url: "/book_rest/query/?type_name=" + type + "&word=" + $("#search_input").val(),
+            success: function (data) {
+                if (data != "false") {
+                    $("#t_body").html(data)
+
+                }
+            }
+        })
+    }
+
+    function removeBook(bid) {
+        $.ajax({
+            type: "GET",
+            url: "/book_rest/remove/?bid=" + bid,
+            success: function (data) {
+                if (data == "yes") {
+                    $("#tr_" + bid).remove()
+                    window.location.reload()
+                }
+            }
+        })
+    }
+
+    function addnum(bid) {
+        $.ajax({
+            type: "post",
+            url: "/book_rest/addnum/?bid=" + bid,
+            success: function (data) {
+                if (data == "yes") {
+                    $("#book_num_" + bid).html((parseInt($("#book_num_" + bid).html()) + 1).toString())
+                    $("#can_lend_" + bid).html((parseInt($("#can_lend_" + bid).html()) + 1).toString())
+                }
+            }
+        })
+    }
+
+    function subBook(bid) {
+        $.ajax({
+            type: "post",
+            url: "/book_rest/subbook/?bid=" + bid,
+            success: function (data) {
+                if (data == "yes") {
+                    $("#book_num_" + bid).html((parseInt($("#book_num_" + bid).html()) - 1).toString())
+                    $("#can_lend_" + bid).html((parseInt($("#can_lend_" + bid).html()) - 1).toString())
+
+                }
+            }
+        })
+    }
+
+    function UpdateUpLoad(bid) {
+        $.ajax({
+            type: "POST",
+            url: "/img_upload/",
+            processData: false,
+            contentType: false,
+            data: new FormData($("#img_form_" + bid)[0]),
+            success: function (data) {
+                $("#up_" + bid).attr("src", data)
+                $("#img_path_" + bid).val(data)
+            },
+
+        })
+    }
+
+    function UpdateBook(bid, isbn_id) {
+        $.ajax({
+            type: "post",
+            url: "/book_rest/update/?isbn_id=" + isbn_id,
+            data: $("#book_msg_" + bid).serialize(),
+            success: function (data) {
+                console.log(data)
+                if (data == "yes") {
+                    alert('修改成功!刷新后即可看到')
+                } else {
+                    alert('修改失败!')
+                }
+            }
+        })
+    }
+
+    function upLoad() {
+        $.ajax({
+            type: "POST",
+            url: "/img_upload/",
+            processData: false,
+            contentType: false,
+            data: new FormData($("#img_form")[0]),
+            success: function (data) {
+                $("#up_img").attr("src", data)
+                $("#img_path").val(data)
+            },
+
+        })
+    }
+
+    $("#add_btn").click(function () {
+        $.ajax({
+            type: "post",
+            url: "/book_rest/add/",
+            data: $("#book_msg").serialize(),
+            success: function (data) {
+                if (data == "yes") {
+                    alert("添加成功！")
+                    $(".modal").modal("hide")
+                    window.location.reload()
+                }
+            }
+        })
+    })
+</script>
+
+</html>

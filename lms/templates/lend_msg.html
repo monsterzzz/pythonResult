@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<body>
+    <div class=".container-fluid">
+        
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>图书id</th>
+                            <th>图书名称</th>
+                            <th>isbn_id</th>
+                            <th>auther</th>
+                            <th>pub</th>
+                            <th>pub</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            {% for i in result%}
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>{{i.bid}}</td>
+                                    <td>{{i.name}}</td>
+                                    <td>{{i.isbn_id}}</td>
+                                    <td>{{i.auther}}</td>
+                                    <td>{{i.publisher}}</td>
+                                    <td>
+                                        <div class="col-sm-4">
+                                            <button class="btn btn-default btn-block" type="submit">Button</button>
+                            
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <button class="btn btn-default btn-block" type="submit">Button</button>
+                            
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <button class="btn btn-default btn-block" type="submit">Button</button>
+                            
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+            </div>   
+        </div>
+    </div>
+
+</body>
+</html>

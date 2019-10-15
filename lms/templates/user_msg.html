@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ book.name }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<body>
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/book_index/">
+                    <p>书籍列表</p>
+                </a>
+            </div>
+            <p class="navbar-text navbar-right" style="margin-right:30px"><a href="/log_out/" class="navbar-link">注销</a></p>
+            <p class="navbar-text navbar-right"><a href="/user_msg/" class="navbar-link">借书纪录</a></p>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="page-header">
+                <h1>你好！<small>{{ request.session.user.name }}</small></h1>
+            </div>
+            <div class="panel panel-info">
+                <!-- Default panel contents -->
+                <div class="panel-heading">未还</div>
+                <!-- List group -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2">借书时间</div>
+                        <div class="col-lg-3">书籍名称</div>
+                        <div class="col-lg-2">出版社</div>
+                        <div class="col-lg-2">应归还时间</div>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    {% for i in not_down %}
+                    <li class="list-group-item" style=" vertical-align: middle;  " id="row_{{ i.bsid }}">
+                        <div class="row ">
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">{{ i.lend_time }} </div>
+                            <div class="col-lg-3" style="height: 35px; line-height: 35px"><a href="/book_detail/{{i.bid}}">{{ i.book.name }} </a></div>
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px; overflow: hidden;">{{ i.book.publisher }} </div>
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px" id="should_back_time_{{i.bsid}}">{{ i.should_back_time }}
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" onclick="continue_lend('{{ i.bsid }}')" class="btn btn-default">续借</button>
+                                    <button type="button" onclick="back_book('{{ i.bsid }}')" class="btn btn-default">归还</button>
+                                    <button type="button" onclick="pay_book('{{ i.bsid }}')" class="btn btn-default">赔偿</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <div class="panel-heading">已还</div>
+                <!-- List group -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2">借书时间</div>
+                        <div class="col-lg-3">书籍名称</div>
+                        <div class="col-lg-2">出版社</div>
+                        <div class="col-lg-2">应归还时间</div>
+                        <div class="col-lg-2">归还时间</div>
+                        <div class="col-lg-1">备注</div>
+                    </div>
+                </div>
+                <ul class="list-group" id="has_down">
+                    {% for i in down %}
+                    <li class="list-group-item" style=" vertical-align: middle;  ">
+                        <div class="row ">
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">{{ i.lend_time }} </div>
+                            <div class="col-lg-3" style="height: 35px; line-height: 35px"><a href="/book_detail/{{i.bid}}">{{ i.book.name }} </a></div>
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">{{ i.book.publisher }} </div>
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px" >{{ i.should_back_time }}</div>
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">{{ i.back_time }}</div>
+                            {% if i.beizhu %}
+                                <div class="col-lg-1" style="height: 35px; line-height: 35px">{{ i.beizhu }}</div>
+                            {% else %}
+                                <div class="col-lg-1" style="height: 35px; line-height: 35px"></div>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function continue_lend(input_data){
+        $.ajax({
+            type:"GET",
+            url: "/lend_rest/continue/?bsid="  + input_data,
+            success:function(data){
+                alert("续借成功！")
+                $("#should_back_time_"+ input_data ).html(data)
+            }
+        })
+    }
+
+    function back_book(input_data){
+        $.ajax({
+            type:"GET",
+            url: "/lend_rest/back_book/?bsid="  + input_data,
+            success:function(data){
+                alert("归还成功！")
+                data = JSON.parse(data)
+                $("#row_" + input_data).remove()
+                $("#has_down").append(
+                    html_str = '<li class="list-group-item" style=" vertical-align: middle;  "> \
+                        <div class="row "> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">'+ data.lend_time  +'</div> \
+                            <div class="col-lg-3" style="height: 35px; line-height: 35px"><a href="/book_detail/'+ data.bid  +'">'+ data.book.name  +'</a></div> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">'+ data.book.publisher  +'</div> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px" >'+ data.should_back_time  +'</div> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">'+ data.back_time  +'</div> \
+                            <div class="col-lg-1" style="height: 35px; line-height: 35px">'+ data.beizhu +'</div> \
+                        </div> \
+                    </li>'
+                )
+
+            }
+        })
+    }
+
+    function pay_book(input_data){
+        $.ajax({
+            type:"GET",
+            url: "/lend_rest/pay_book/?bsid="  + input_data,
+            success:function(data){
+                alert("赔偿成功！")
+                data = JSON.parse(data)
+                $("#row_" + input_data).remove("")
+                $("#has_down").append(
+                    html_str = '<li class="list-group-item" style=" vertical-align: middle;  "> \
+                        <div class="row "> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">'+ data.lend_time  +'</div> \
+                            <div class="col-lg-3" style="height: 35px; line-height: 35px"><a href="/book_detail/'+ data.bid  +'">'+ data.book.name  +'</a></div> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">'+ data.book.publisher  +'</div> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px" >'+ data.should_back_time  +'</div> \
+                            <div class="col-lg-2" style="height: 35px; line-height: 35px">'+ data.back_time  +'</div> \
+                            <div class="col-lg-1" style="height: 35px; line-height: 35px">'+ data.beizhu +'</div> \
+                        </div> \
+                    </li>'
+                )
+            }
+        })
+    }
+</script>
+
+</html>
