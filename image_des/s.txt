@@ -1,0 +1,1050 @@
+<html><head>
+    
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=8;">
+<link rel="Bookmark" href="https://www.baidu.com/cache/icon/favicon.ico">
+<link rel="shortcut icon" href="https://www.baidu.com/cache/icon/favicon.ico" type="image/x-icon">
+<link rel="icon" sizes="any" mask="" href="//www.baidu.com/img/baidu.svg">
+
+
+<title>百度指数</title>
+<meta name="keywords" content="百度指数,大数据,数据分享平台,搜索趋势">
+<meta name="description" content="百度指数是以百度海量网民行为数据为基础的数据分享平台。在这里，你可以研究关键词搜索趋势、洞察网民兴趣和需求、监测舆情动向、定位受众特征。">
+
+<script type="text/javascript">
+window.pageStatus = false;
+// 鐧惧害缁熻
+var _hmt = _hmt || [];
+var PPval = {
+    adjust: 1533201178000 - new Date(),
+    dataStm: 1533052800000,
+    modCtrl: '',
+    hostUrl: function (u) {return u.split('/').slice(0,3).join('/');}(location.href),
+    baseUrl: '/',
+    routeUrl: '/',
+    staticUrl: '/static/',
+    imgsUrl: '/static/imgs/',
+    dataface: '/Interface/',
+    isSnap: 1
+};
+</script>
+
+                        
+    
+        <link type="text/css" rel="stylesheet" href="/static/css/styles.css?a0726">
+
+
+
+
+
+
+<script src="http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=425890"></script><link href="http://bdimg.share.baidu.com/static/css/bdsstyle.css?cdnversion=20131219" rel="stylesheet" type="text/css"></head>
+<body><iframe style="display: none;" frameborder="0"></iframe><div id="bdshare_s" style="display: block;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div id="bdshare_l" style="display: none;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="#" class="bds_mshare mshare">一键分享</a></li><li><a href="#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="#" class="bds_renren rrw">人人网</a></li><li><a href="#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="#" class="bds_douban db">豆瓣网</a></li><li><a href="#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="#" class="bds_sqq sqq">QQ好友</a></li><li><a href="#" class="bds_thx thx">和讯微博</a></li><li><a href="#" class="bds_more">更多...</a></li></ul><p><a href="#" class="goWebsite">百度分享</a></p></div></div></div>
+
+
+
+
+
+    
+
+<div class="navWrap" id="headerWrap">
+<div class="mw1300" style="position:relative;_position:relative;_z-index:1;">
+        <div id="headsch" class="mw1300" style="position:relative;">
+            <div class="logo"><a href="/"><img src="/static/imgs/index_logo_white_2x.png" alt="百度指数" width="100" height="35"> </a></div>
+            <div class="sch_nav_fm">
+
+<ul id="schnav" class="schnav ftz" onclick="BID.schnav_click()">
+    <li class="navli"><a target="_blank" name="news" href="http://news.baidu.com/">新&nbsp;闻</a></li>
+    <li class="navli"><a target="_blank" name="baidu" href="http://www.baidu.com/">网&nbsp;页</a></li>
+    <li class="navli"><a target="_blank" name="tieba" href="http://tieba.baidu.com/">贴&nbsp;吧</a></li>
+    <li class="navli"><a target="_blank" name="zhidao" href="http://zhidao.baidu.com/">知&nbsp;道</a></li>
+    <li class="navli"><a target="_blank" name="baike" href="http://baike.baidu.com/">百&nbsp;科</a></li>
+    <li class="navli"><a target="_blank" name="wenku" href="http://wenku.baidu.com/">文&nbsp;库</a></li>
+    <li class="navli"><a target="_blank" href="http://top.baidu.com/">风云榜</a></li>
+    <li class="navli"><b>指&nbsp;数</b></li>
+</ul>
+
+
+    
+<form id="schfm" method="get" action="/">
+    <input name="tpl" value="trend" type="hidden">
+    <div class="schbox" style="/*width:600px;*/">
+        <div class="ftl">
+            <div class="search-text-con"><span>探索</span></div>
+            <label class="hold_label" for="schword" id="auto_gsid_0" style="padding: 9px 40px; color: rgb(216, 216, 216); font-size: 14px; display: none;">探索主题</label><input id="schword" class="ipt hold_efkt" style="_margin-top:-2px;" name="word" maxlength="50" autocomplete="off" hold_txt="探索主题" value="韩国旅游" hold_label="auto_gsid_0">
+        </div>
+        <input id="schsubmit" class="btn ftl" value="百度一下" onmouseout="this.className='btn ftl';" onmousedown="this.className='btn ftl btn_h';" onclick="if(!document.getElementById('schword').value){this.className = 'btn ftl'; return false;}" type="submit">
+        <div class="exlink ftl">
+        </div>
+        <div class="ftc"></div>
+    </div>
+</form>
+
+
+
+
+<form id="adv_schfm" class="dsn" method="get" action="/" autocomplete="off">
+    <input name="tpl" value="trend">
+    <input name="type" value="0">
+    <input name="area" value="0">
+    <input name="time" value="13">
+    <input name="word" value="韩国旅游">
+</form>
+
+</div>
+
+
+            <div id="banner_header" style="position:absolute;right:0;top:0px;"></div>
+            <div class="ftc"></div>
+        </div>
+
+<div class="navTop">
+<div id="userbar">
+
+<ul class="usernav">
+            <li class="navli"><a class="umenu" href="/">首页</a></li>
+
+        <li class="navli curr"><a class="umenu" href="/?tpl=trend&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE">指数探索</a></li>
+	    <li class="navli"><a class="umenu" href="/v2/topic/index.html">最新动态</a></li>
+	    <li class="navli brand"><a class="umenu" href="/v2/rank/index.html"><img src="/static/imgs/brand-top.png" width="98" height="28"></a></li>
+
+        <li class="navli userName" style="position:absolute;right:0;">
+            <div class="extrainfo mobile" onmouseover="T('#uNavuMobile').show()" onmouseout="T('#uNavuMobile').hide()">
+                <i class="icons icon-mobile"></i>
+                <div id="uNavuMobile" class="userMenu userMenu-mobile">
+                    <img src="/static/imgs/index-mobile-qrt.png" width="100" height="100">
+                </div>
+            </div>
+            <div class="extrainfo weixin" onmouseover="T('#uNavuWeixin').show()" onmouseout="T('#uNavuWeixin').hide()">
+                <i class="icons icon-weixin"></i>
+                <div id="uNavuWeixin" class="userMenu userMenu-weixin">
+                    <img src="/static/imgs/index-qrt.png" width="100" height="100">
+                </div>
+            </div>
+            <div class="extrainfo" onmouseover="T('#uNavuMenu').show()" onmouseout="T('#uNavuMenu').hide()">
+                <i class="icons membnot" style="width:18px;height:18px;"></i>
+                <span id="ubarUname">缺爱的山头</span>
+                <i class="icons arroDown"></i>
+                <div id="uNavuMenu" class="userMenu">
+                    <a class="umenu" href="/Attention/?tpl=att&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE">我的指数</a>
+                                                                                <a class="umenu" target="_blank" href="/VIP/buy/?word=%BA%AB%B9%FA%C2%C3%D3%CE">创建新词</a>
+                    <a class="umenu" href="/Attention/?tpl=orders&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE">购买记录</a>
+                                            <a id="ubarLogout" class="umenu sep" href="https://passport.baidu.com/?logout">退出</a>
+                                    </div>
+            </div>
+
+	
+        </li>
+        <!--<li class="navli">
+        <span>关注我们</span>
+        <a class="icons tieba" target="_blank" href="http://tieba.baidu.com/f?kw=%B0%D9%B6%C8%D6%B8%CA%FD"></a>
+        <a class="icons weibo" target="_blank" href="http://weibo.com/indexprobaidu"></a>
+    </li> -->
+</ul>
+</div>
+</div>
+<div class="ftc"></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div class="subNavBarWrap">
+<div class="mw1300">
+<div class="subNavBar">
+    <table id="subNav">
+        <tbody><tr>
+            <td><a class="snava curr" href="/?tpl=trend&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE"><i class="icons trendIcon"></i><span class="holdW">趋势研究</span></a></td>
+            <td><a class="snava" href="/?tpl=demand&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE"><i class="icons demandIcon"></i><span class="holdW">需求图谱</span></a></td>
+            <td><a class="snava" href="/?tpl=sentiment&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE"><i class="icons sentimentIcon"></i><span class="holdW">资讯关注</span></a></td>
+            <td><a class="snava" href="/?tpl=crowd&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE"><i class="icons crowdIcon"></i><span class="holdW">人群画像</span></a></td>
+        </tr>
+    </tbody></table>
+</div>
+</div>
+</div>
+
+
+
+
+    
+<!--
+<div class="mNavBar">
+<div class="mw1300">
+    <h2 class="navLogo">大数据分享和探索平台</h2>
+    <a class="navItem curr" href="/?tpl=trend&word=%BA%AB%B9%FA%C2%C3%D3%CE">
+        <i class="icons theIndex"></i><span>指数探索</span>
+    </a>
+    <a class="navItem" href="/Helper/?tpl=topic&word=%BA%AB%B9%FA%C2%C3%D3%CE">
+        <i class="icons industry"></i><span>数说专题</span>
+    </a>
+
+    <a class="navItem" href="/Attention/?tpl=att&word=%BA%AB%B9%FA%C2%C3%D3%CE">
+        <i class="icons myIndex"></i><span>我的指数</span>
+    </a>
+</div>
+</div>
+-->
+
+<!--[if lt IE 7 ]>
+    <div style="position:absolute;left:0;top:90px;width:100%;height:40px;line-height:38px;background:#4284e2;">
+        <p style="text-align:center;font-size:18px;color:#fff;">亲爱的用户，请您
+        <a target="_blank" href="http://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E6%B5%8F%E8%A7%88%E5%99%A8" style="color:#3f9;font-weight:bold;">升级浏览器</a>
+        以获得正常的使用效果
+        <a href="javascript:;" style="margin-left:20px;font-size:14px;color:#eca;" onclick="this.parentNode.parentNode.style.display='none'">暂时忽略</a></p>
+    </div>
+<![endif]-->
+
+
+
+<div class="mw1300" id="trendTools">
+    <div id="lTools" class="lTools sZone">
+        <div id="lTools_c">
+                            <form id="adv_pannel" class="" autocomplete="off">
+    <div class="tabUnit" id="">
+        <div class="tabTitle">
+            <div class="tabKey">
+                <div id="currentTabKey" class="sltTxt">按关键词</div>
+                <ul id="compTab" class="tabUl" onclick="BID.tabFun()">
+                    <li class="tabLi curr"><i class="icons byWord"></i><span>按关键词</span></li>
+                    <li class="tabLi"><i class="icons byArea"></i><span>按地域</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tabConts" style="padding-top:8px;*z-index:1;float:left;" id="">
+            <div class="tabCont tabContWord" id="">
+                
+
+<input name="type" value="0" type="hidden">
+
+<a href="javascript:;" id="addFavBtn" class="dsn addFav" onclick="BID.addFavWords()"><i class="icons add"></i><span>关注</span></a>
+
+
+<div id="compOthtime" class="compOth trans" "="" ctlname="time">
+    <div class="comCtl">
+        <div class="comBorderL">
+        <span class="selectA rangeDate" limitb="20110101" onclick="BID.rangeDate()" style="background-image:none;" id="">
+            <span class="icontext">时间：</span>
+            <input class="sltVal" name="time" value="13" type="hidden">
+            <span class="sltTxt">最近30天</span>
+            <i class="icons hdArDn"></i>
+            <div class="sltOpt">
+                                                                                                                                                            <a href="#12">最近7天</a>
+                                                                                                        <a href="#13">最近30天</a>
+                                                                                                                                                                                                                                                                                                        <div style="height:0;margin:2px 10px;border-top:1px dashed #d7d7d7;_overflow:hidden;"></div>                        <a href="#cust">自定义时间段</a>
+                                                </div>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </div>
+</div>
+<div id="compOtharea" class="compOth" ctlname="area">
+    <div class="comCtl">
+        <div class="comBorderL" onclick="BID.holdReg()" id="">
+        <span class="holdBox" id="">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()" id="">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </div>
+</div>
+<div class="compVsplit"></div>
+<ul class="compUl hideDel" ctlname="word">
+    <li class="compLi comCtl" id="">
+        <div class="comBorderL">
+	    <div class="inner" style="width:120px;">
+                <input name="word" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+	    </div>
+        </div>
+        <div class="comBorderR" style="border-color: rgb(62, 199, 245);"></div>
+        <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        <i title="添加组合词" class="addComp">+</i>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL">
+	    <div class="inner" style="width:120px;">
+                <input name="word" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+	    </div>
+        </div>
+        <div class="comBorderR"></div>
+        <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        <i title="添加组合词" class="addComp">+</i>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL">
+	    <div class="inner" style="width:120px;">
+                <input name="word" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+	    </div>
+        </div>
+        <div class="comBorderR"></div>
+        <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        <i title="添加组合词" class="addComp">+</i>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL">
+	    <div class="inner" style="width:120px;">
+                <input name="word" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+	    </div>
+        </div>
+        <div class="comBorderR"></div>
+        <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        <i title="添加组合词" class="addComp">+</i>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL">
+	    <div class="inner" style="width:120px;">
+                <input name="word" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+	    </div>
+        </div>
+        <div class="comBorderR"></div>
+        <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        <i title="添加组合词" class="addComp">+</i>
+    </li>
+</ul>
+<a href="javascript:;" class="addComp" onclick="BID.add_del_comp()"><i class="icons add"></i><span>添加对比词</span></a>
+
+
+
+            </div>
+            <div class="tabCont tabContArea dsn" id="">
+                
+
+<input name="type" value="1" type="hidden">
+<div class="compOth trans" ctlname="time">
+    <div class="comCtl">
+        <div class="comBorderL">
+        <span class="selectA rangeDate" limitb="20110101" onclick="BID.rangeDate()" style="background-image:none;" id="">
+            <span class="icontext">时间：</span>
+            <input class="sltVal" name="time" value="13" type="hidden">
+            <span class="sltTxt">最近30天</span>
+            <i class="icons hdArDn"></i>
+            <div class="sltOpt">
+                                                                                                                                                            <a href="#12">最近7天</a>
+                                                                                                        <a href="#13">最近30天</a>
+                                                                                                                                                                                                                                                                                                        <div style="height:0;margin:2px 10px;border-top:1px dashed #d7d7d7;_overflow:hidden;"></div>                        <a href="#cust">自定义时间段</a>
+                                                </div>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </div>
+</div>
+
+<div class="compVsplit"></div>
+
+<ul class="compUl hideDel" ctlname="area">
+    <li class="compLi comCtl" id="">
+        <div class="comBorderL" onclick="BID.holdReg()" id="">
+        <span class="holdBox" id="">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()" id="">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR" style="border-color: rgb(62, 199, 245);">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL" onclick="BID.holdReg()">
+        <span class="holdBox">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL" onclick="BID.holdReg()">
+        <span class="holdBox">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL" onclick="BID.holdReg()">
+        <span class="holdBox">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </li>
+    <li class="compLi comCtl dsn">
+        <div class="comBorderL" onclick="BID.holdReg()">
+        <span class="holdBox">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </li>
+</ul>
+
+<a href="javascript:;" class="addComp" onclick="BID.add_del_comp()"><i class="icons add"></i><span>添加对比地域</span></a>
+<div class="compOth szoneOth" ctlname="word">
+    <div class="comBorderL" style="border-left-color: #ccc;">
+        <label for="compOth_comWord" style="cursor:text;">关键词：</label>
+        <input name="word" id="compOth_comWord" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+    </div>
+</div>
+
+
+
+
+            </div>
+        </div>
+
+        <a id="advSearchSubmit" href="javascript:;" onclick="BID.advSearch()">确定</a>
+        
+    </div>
+</form>
+
+
+
+
+
+<form autocomplete="off" style="display:none;">
+    <div id="advTpls_word">
+        <div class="comBorderL">
+	    <div class="inner" style="width:120px;">
+                <input name="word" class="comWord" maxlength="50" onmousedown="BID.createSug()" autocomplete="off">
+	    </div>
+        </div>
+        <div class="comBorderR"></div>
+        <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        <i title="添加组合词" class="addComp">+</i>
+    </div>
+    <div id="advTpls_area">
+        <div class="comBorderL" onclick="BID.holdReg()">
+        <span class="holdBox">
+            <span class="icontext">地区：</span>
+            <span class="holdText">全国</span>
+            <i class="icons hdArDn"></i>
+        </span>
+        <span class="regionA" style="width:186px;" onclick="BID.regionA()">
+            <input class="regionValue" name="area" value="0" onchange="BID.holdRegChg()">
+            <span class="selectA provA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有省份</span>
+                <div class="sltOpt"></div>
+            </span>
+            <span class="selectA cityA">
+                <input class="sltVal" value="0" onchange="BID.regionA.change()">
+                <span class="sltTxt">所有城市</span>
+                <div class="sltOpt"></div>
+            </span>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </div>
+
+            <div id="advTpls_time">
+        <div class="comBorderL">
+        <span class="selectA rangeDate" limitb="20110101" onclick="BID.rangeDate()" style="background-image:none;">
+            <span class="icontext">时间：</span>
+            <input class="sltVal" name="time" value="" type="hidden">
+            <span class="sltTxt"></span>
+            <i class="icons hdArDn"></i>
+            <div class="sltOpt">
+                                                                                                                                                            <a href="#12">最近7天</a>
+                                                                                                        <a href="#13">最近30天</a>
+                                                                                                                                                                                                                                                                                                        <div style="height:0;margin:2px 10px;border-top:1px dashed #d7d7d7;_overflow:hidden;"></div>                        <a href="#cust">自定义时间段</a>
+                                                </div>
+        </span>
+        </div>
+        <div class="comBorderR">
+            <i class="icons delComp" onclick="BID.add_del_comp()"></i>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+<div id="banner_trend"></div>
+
+
+
+                    </div>
+    </div>
+    <div id="mainWrap">
+        <div class="mainSplit">
+            
+
+    
+
+    
+<div class="blkUnit grpUnit" id="trendProfile">
+    <div class="titlBar" style="padding-bottom:15px;" id="auto_gsid_1">
+        <h4>搜索指数概况</h4>
+        <i class="icons help" onclick="BID.showHelpTip('hptp_tProfile')"></i>
+    <span class="compInfo" style="display: none;"> </span><span class="compInfo">2018-07-26 至 2018-08-01</span><span class="compInfo">全国</span></div>
+    <div class="tabUnit" id="auto_gsid_2">
+        <div class="tabTitle" id="auto_gsid_3">
+            <div class="stmTabs tabUl" onclick="BID.tabFun()" id="auto_gsid_4"><a class="tabLi gColor0 curr" href="javascript:;" style="display: block;" id="" title="近7天"><div class="nmTab">近7天</div><div class="hvTab">近7天</div></a><a class="tabLi gColor1" href="javascript:;" style="display: block;" id="" title="近30天"><div class="nmTab">近30天</div><div class="hvTab">近30天</div></a><a class="tabLi gColor2" href="javascript:;" style="display: none;"><div class="nmTab"></div><div class="hvTab"></div></a><a class="tabLi gColor3" href="javascript:;" style="display: none;"><div class="nmTab"></div><div class="hvTab"></div></a><a class="tabLi gColor4" href="javascript:;" style="display: none;"><div class="nmTab"></div><div class="hvTab"></div></a></div>
+        </div>
+        <div class="tabConts" id="auto_gsid_5" style=""><div class="toLoading" style="display: none;"><div class="loadingImg"></div></div><div class="tabCont gColor0" style="zoom:1;" id=""><table class="mtable profWagv">    <tbody><tr>        <th>&nbsp;</th>        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">            整体日均值<span class="tsp">|</span>移动日均值        </div><div class="lrRr"></div></div></th>        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">            整体同比<span class="tsp">|</span>整体环比        </div><div class="lrRr"></div></div></th>        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">            移动同比<span class="tsp">|</span>移动环比        </div><div class="lrRr"></div></div></th>    </tr>    <tr>        <td class="tpWord"><div class="toe" style="color:#3ec7f5;" title="韩国旅游">韩国旅游</div></td>        <td><div class="lrRadius">            <span class="ftlwhf enc2imgVal"><span class="imgval" style="width:4px;"><div class="imgtxt" style="margin-left:-56px;"></div></span><span class="imgval" style="width:28px;"><div class="imgtxt" style="margin-left:-92px;"></div></span><span class="imgval" style="width:7px;"><div class="imgtxt" style="margin-left:-120px;"></div></span><span class="imgval" style="width:1px;"><div class="imgtxt" style="margin-left:-159px;"></div></span><style>.profWagv .imgval .imgtxt{background:url("/Interface/IndexShow/img/?res=MXASLRYKHQ9XfxIlFyQGQXEIJh0dCyIHdQQIYnchBz1KN1grVB0AcWcCKysAITI8NVJ5KV0qGHgiQxMVTzASYDE6AhYcCh0uCFs1UFl3E10WOz9DMgomcX1jZTFxTBFEdAgJCFxhRUJXACcidHYAdTkBQANrS3YaGXBpdwUOQAJhfRQWQTkEFgdIfkRREhQFSyIEUSk6ByM5LEMMM3Y%2FGRcdXQNzPDENIwMpBywDUScjLjUNcCNwdV8%2FQBMDYiQAIygWJVl5A0kcUAEkVQAxRAIxXnkpOgdCORA%3D&res2=17EXSTR2.4454Agyqd4xdnNExNW8AWrlDyMNLY30wcAzLb1jCIiZUtjCttlQFE17&res3=dAAGNgJKZHomVBN5BnU%2BJw0uQEx9cHZFZHQQDmR5WFwKEnJxUFEKcGAxIXRQZAUCNkAPU2M%2BEncBbwYJZ3QnVDpAA2UdR24XU3UGeVxne2RLJEACe2MGQXdgRBJTd3RUQ3NAVh14RmF6cVEddHItUEpff1YSYgUEQXZ%2FIXFkQkBXSnduHW4QfgVFc1FWCkB8cwYZFXVWFHF3dQ8vMhQvF1JkAQ91YAB5f3ByAmB4cndzfE8JX38RdxUxXmdwKzFyEXJ%2BCzZEN2YRAQZwC0VEB34gawBkA2IVPRF%2FX1YUXTZgcg43I3B1fgZnFxMPCnZ5azlRYF57WjNiRQJ1AmYHaltyaBoVFUV%2FBXwkJ00mEHUnLA%3D%3D&type=2")}</style></span>            <span class="ftlwhf enc2imgVal"><span class="imgval" style="width:8px;"><div class="imgtxt" style="margin-left:-176px;"></div></span><span class="imgval" style="width:16px;"><div class="imgtxt" style="margin-left:-208px;"></div></span></span>        </div></td>        <td><div class="lrRadius">            <span class="ftlwhf imgnums"><span class="ratDown">-<i style="background-position:-64px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>            <span class="ftlwhf imgnums"><span class="ratUp"><i style="background-position:-8px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>        </div></td>        <td><div class="lrRadius">            <span class="ftlwhf imgnums"><span class="rat__"><i style="background-position:-0px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>            <span class="ftlwhf imgnums"><span class="rat__"><i style="background-position:-0px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>        </div></td>    </tr></tbody></table></div><div class="tabCont gColor1 dsn" style="zoom:1;" id=""><table class="mtable profMagv">    <tbody><tr>        <th>&nbsp;</th>        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">            整体日均值<span class="tsp">|</span>移动日均值        </div><div class="lrRr"></div></div></th>        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">            整体同比<span class="tsp">|</span>整体环比        </div><div class="lrRr"></div></div></th>        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">            移动同比<span class="tsp">|</span>移动环比        </div><div class="lrRr"></div></div></th>    </tr>    <tr>        <td class="tpWord"><div class="toe" style="color:#3ec7f5;" title="韩国旅游">韩国旅游</div></td>        <td><div class="lrRadius">            <span class="ftlwhf enc2imgVal"><span class="imgval" style="width:8px;"><div class="imgtxt" style="margin-left:-16px;"></div></span><span class="imgval" style="width:16px;"><div class="imgtxt" style="margin-left:-88px;"></div></span><span class="imgval" style="width:4px;"><div class="imgtxt" style="margin-left:-112px;"></div></span><span class="imgval" style="width:12px;"><div class="imgtxt" style="margin-left:-140px;"></div></span><style>.profMagv .imgval .imgtxt{background:url("/Interface/IndexShow/img/?res=MXASLRYKHQ9XfxIlFyQGQXEIJh0dCyIHdQQIYnchBz1KN1grVB0AcWcCKysAITI8NVJ5KV0qGHgiQxMVTzASYDE6AhYcCh0uCFs1UFl3E10WOz9DMgomcX1jZTFxTBFEdAgJCFxhRUJXACcidHYAdTkBQANrS3YaGXBpdwUOQAJhfRQWQTkEFgdIfkRREhQFSyIEUSk6ByM5LEMMM3Y%2FGRcdXQNzPDENIwMpBywDUScjLjUNcCNwdV8%2FQBMDYiQAIygWJVl5A0kcUAEkVQAxRAIxXnkpOgdCORA%3D&res2=17EXSTR2.4454Agyqd4xdnNExNW8AWrlDyMNLY30wcAzLb1jCIiZUtjCttlQFE17&res3=ej9BM3otdHIECk8gMmF7cwIXd2QwElNFAyRmcVFWCwpQIkJiVxgOcmFaJxNrbTAQU0JKMGMPA24EE0AkcHFwABZiXVwDB2c3c1BCSkRUYAMKcgUnPBkjB0ljEjICHXlGcVBAH1VgcQV1YVcjUn5lelRLV0R4BGdkRlMkBUAdHQBwBkFVUHRlenl0QkBBY3lCZXwkYXQCUwBJEzFGZnl9AUYsZTFFY3hIaXoVS3IDBHtud1YERUpkfURGDXhocEsKcBFzMWt%2BOUQ2EUBgMmVoCEtCQnBienU1cXN5SBcEfQF6fGVucAQ2G2E5A14KBVhkQRERIWgjTmlERHYEcz5KCgYFaE1vcmNHUgBhBn0VVgIHBhY5dgJ1CANrAm5wfWtwdwIlewdyXzYRIhULNHAAfTFyESUUN1MRRBdVRnMa&type=2")}</style></span>            <span class="ftlwhf enc2imgVal"><span class="imgval" style="width:5px;"><div class="imgtxt" style="margin-left:-152px;"></div></span><span class="imgval" style="width:11px;"><div class="imgtxt" style="margin-left:-213px;"></div></span><span class="imgval" style="width:5px;"><div class="imgtxt" style="margin-left:-248px;"></div></span><span class="imgval" style="width:3px;"><div class="imgtxt" style="margin-left:-269px;"></div></span></span>        </div></td>        <td><div class="lrRadius">            <span class="ftlwhf imgnums"><span class="ratDown">-<i style="background-position:-8px -2px;"></i><i style="background-position:-32px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>            <span class="ftlwhf imgnums"><span class="ratUp"><i style="background-position:-8px -2px;"></i><i style="background-position:-8px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>        </div></td>        <td><div class="lrRadius">            <span class="ftlwhf imgnums"><span class="ratDown">-<i style="background-position:-8px -2px;"></i><i style="background-position:-8px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>            <span class="ftlwhf imgnums"><span class="ratUp"><i style="background-position:-8px -2px;"></i><i style="background-position:-40px -2px;"></i><i style="background-position:-80px -2px;"></i></span></span>        </div></td>    </tr></tbody></table></div><div class="tabCont gColor2 dsn" style="zoom:1;"></div><div class="tabCont gColor3 dsn" style="zoom:1;"></div><div class="tabCont gColor4 dsn" style="zoom:1;"></div></div>
+<script class="baiduTpl" type="text/html" id="auto_gsid_6">
+<%if(!items || !items.length){ %><%:=BID.sTips['noDataP']%><%return;}%>
+<table class="mtable <%=tbClass%>">
+    <tr>
+        <th>&nbsp;</th>
+        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">
+            整体日均值<span class="tsp">|</span>移动日均值
+        </div><div class="lrRr"></div></div></th>
+        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">
+            整体同比<span class="tsp">|</span>整体环比
+        </div><div class="lrRr"></div></div></th>
+        <th><div class="lrRadius"><div class="lrRl"></div><div class="lrRc">
+            移动同比<span class="tsp">|</span>移动环比
+        </div><div class="lrRr"></div></div></th>
+    </tr>
+<%
+for(var i = 0, iLen = items.length; i < iLen; i++){
+    var item = items[i];
+%>
+    <tr>
+        <td class="tpWord"><div class="toe" style="color:<%=BID.getColor(i)%>;" title="<%=item.word%>"><%=item.word%></div></td>
+        <td><div class="lrRadius">
+            <span class="ftlwhf enc2imgVal"></span>
+            <span class="ftlwhf enc2imgVal"></span>
+        </div></td>
+        <td><div class="lrRadius">
+            <span class="ftlwhf imgnums"><span class="<%=BID.rat_0(item.all_yoy)%>"><%:=BID.Rommafy_img(item.all_yoy, '%')%></span></span>
+            <span class="ftlwhf imgnums"><span class="<%=BID.rat_0(item.all_qoq)%>"><%:=BID.Rommafy_img(item.all_qoq, '%')%></span></span>
+        </div></td>
+        <td><div class="lrRadius">
+            <span class="ftlwhf imgnums"><span class="<%=BID.rat_0(item.wise_yoy)%>"><%:=BID.Rommafy_img(item.wise_yoy, '%')%></span></span>
+            <span class="ftlwhf imgnums"><span class="<%=BID.rat_0(item.wise_qoq)%>"><%:=BID.Rommafy_img(item.wise_qoq, '%')%></span></span>
+        </div></td>
+    </tr>
+<%
+}
+%>
+</table>
+</script>
+    </div>
+</div>
+
+
+
+    
+
+
+<style id="innerStyle4BarAvg"></style>
+<style>
+.tipopWords{z-index:6;position:absolute;margin-top:-25px;}
+.tipopWords .contentWord{
+    padding:3px 5px;font-size:12px;
+    border:1px solid #4d4d4d;border-radius:4px;
+    background-color:#4d4d4d;color:#fff;
+}
+.tipopWords .showPoint{position:absolute;left:50%;bottom:0px;width:10px;margin-left:-5px;}
+.showPoint .arrBorder, .showPoint .arrContent{
+    position:absolute;width:0;height:0;overflow:hidden;
+    border:5px dashed transparent;border-bottom:none;
+}
+.showPoint .arrBorder{border-top:5px solid #4d4d4d;bottom:-5px;}
+.showPoint .arrContent{border-top:5px solid #4d4d4d;bottom:-4px;}
+</style>
+
+
+
+<div class="blkUnit grpUnit intrtUnit" id="trend-wrap">
+    <div class="titlBar" style="padding-bottom:16px;" id="auto_gsid_7">
+        <h4>搜索指数趋势</h4>
+        <i class="icons help" onclick="BID.showHelpTip('hptp_trend')"></i>
+        <div class="ttools" style="display: block;">
+            <i class="icons shar" title="分享"></i>
+            <!-- i class="icons down" title="下载"></i -->
+        </div>
+    <span class="compInfo">韩国旅游</span><span class="compInfo">2018-07-03 至 2018-08-01</span><span class="compInfo">全国</span></div>
+    
+    <div id="searchLiveTip" class="tip24hinfo" style="display: none;">
+        <i id="searchLiveTipClose" class="icons close"></i>
+        <div class="tip24hcont">计算昨日数据时会扣除24小时数据中非网民主动搜索量</div>
+    </div>
+    <div class="grpArea" style="width:100%;overflow:hidden;position:relative;z-index:0;" id="auto_gsid_15"><div class="toLoading" style="display: none;"><div class="loadingImg"></div></div>
+        <div style="position:absolute;top:0;z-index:2;width:100%;">
+            <ul class="tab-hd trendtype" data-type="trendtype" style="position:absolute;left:20px;top:20px;">
+                <li data-value="all" class="active"><i class="icon-all"></i>整体趋势</li>
+                <li data-value="pc"><i class="icon-pc"></i>PC趋势</li>
+                <li data-value="wise"><i class="icon-wise"></i>移动趋势</li>
+            </ul>
+            <div class="box-toolbar" style="right:17px;top:26px;">
+                <label style="line-height:32px;cursor:default;" class="tab-circle-label">最近</label>
+                <a class="chartselectHours" rel="24h" href="javascript:void(0)">24h</a>
+                <a class="chartselect" rel="7" href="javascript:void(0)">7天</a>
+                <a class="chartselect chartselect-click" rel="30" href="javascript:void(0)">30天</a>
+                <a class="chartselect" rel="90" href="javascript:void(0)">90天</a>
+                <a class="chartselect" rel="180" href="javascript:void(0)">半年</a>
+                <a class="chartselect" rel="all" href="javascript:void(0)">全部</a>
+                <a class="chartselectdiy" rel="diy" href="javascript:void(0)">自定义</a>
+            </div>
+            <div id="trend-control" class="box-toolbar" style="top:105px">
+                <label style="visibility:hidden;" id="trend-topline"><span></span>新闻头条</label>
+                <label id="trend-meanline"><span></span>平均值</label>
+                <label style="display:none;" id="trend-forecast"><span></span>预测</label>
+            </div>
+        </div>
+        <div id="trend_copyright" style="left: 20px; top: 325px;" class="R_copyright"></div>
+        <img id="trendYimg" style="position: absolute; left: 1129px; top: 137px;" src="/Interface/IndexShow/getYaxis/?res=MXASLRYKHQ9XfxIlFyQGQXEIJh0dCyIHdQQIYnchBz1KN1grVB0AcWcCKysAITI8NVJ5KV0qGHgiQxMVTzASYDE6AhYcCh0uCFs1UFl3E10WOz9DMgomcX1jZTFxTBFEdAgJCFxhRUJXACcidHYAdTkBQANrS3YaGXBpdwUOQAJhfRQWQTkEFgdIfkRREhQFSyIEUSk6ByM5LEMMM3Y%2FGRcdXQNzPDENIwMpBywDUScjLjUNcCNwdV8%2FQBMDYiQAIygWJVl5A0kcUAEkVQAxRAIxXnkpOgdCORA%3D&amp;res2=17EXSTR2.4454Agyqd4xdnNExNW8AWrlDyMNLY30wcAzLb1jCIiZUtjCttlQFE17&amp;max_y=UFz&amp;min_y=EZI&amp;axis=UF">
+        <div id="trend" class="R_paper" style="height:480px;_background-color:#fff;"><svg height="460" version="1.1" width="1254" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.5px; top: -0.5px;"><desc>Created with Raphaël 2.1.0</desc><defs></defs><rect x="20" y="100" width="10" height="10" r="0" rx="0" ry="0" fill="#3ec7f5" stroke="#ffffff" style=""></rect><text style="text-anchor: start; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="38" y="105" text-anchor="start" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#333333"><tspan dy="4.5">韩国旅游</tspan></text><a xlink:title="韩国旅游"><rect x="20" y="100" width="66" height="13" r="0" rx="0" ry="0" fill="#ff0000" stroke="none" style="opacity: 0; cursor: pointer;" opacity="0"></rect></a><text style="text-anchor: start; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="20" y="140" text-anchor="start" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.5">搜索指数</tspan></text><path style="" fill="none" stroke="#f1f1f1" d="M20,130L1234,130M20,159.66666666666666L1234,159.66666666666666M20,189.33333333333331L1234,189.33333333333331M20,219L1234,219M20,248.66666666666666L1234,248.66666666666666M20,278.3333333333333L1234,278.3333333333333M20,308L1234,308"></path><text style="text-anchor: start; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="20" y="350.66666666666663" text-anchor="start" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.500010172526004">2018年7月3日</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="354.8965517241379" y="350.66666666666663" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.500010172526004">7月11日</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="647.9310344827586" y="350.66666666666663" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.500010172526004">7月18日</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="940.9655172413793" y="350.66666666666663" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.500010172526004">7月25日</tspan></text><text style="text-anchor: end; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="1234" y="350.66666666666663" text-anchor="end" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.500010172526004">8月1日</tspan></text><path style="" fill="none" stroke="#f1f1f1" d="M354.8965517241379,130L354.8965517241379,337.66666666666663M354.8965517241379,365L354.8965517241379,415M647.9310344827586,130L647.9310344827586,337.66666666666663M647.9310344827586,365L647.9310344827586,415M940.9655172413793,130L940.9655172413793,337.66666666666663M940.9655172413793,365L940.9655172413793,415M1234,130L1234,337.66666666666663M1234,365L1234,415"></path><path style="" fill="none" stroke="#cccccc" d="M17,337.66666666666663L1235,337.66666666666663"></path><path style="" fill="none" stroke="#cccccc" d="M17,365L1235,365"></path><path style="opacity: 0.1;" fill="#3ec7f5" stroke="none" d="M20,281.030303030303C20,281.030303030303,46.88893010393745,255.80085995451816,61.86206896551724,241.17508417508412C76.83520782709704,226.5493083956501,87.47408266479604,212.41479241770065,103.72413793103448,199.22222222222217C119.97419319727291,186.0296520267437,124.98759019968398,168.23732771214335,145.58620689655172,171.95286195286195C166.18482359341945,175.66839619358055,170.60744401147952,216.15964043530337,187.44827586206895,228.58922558922558C204.2891077126584,241.01881074314778,208.401385113041,242.31168191794123,229.3103448275862,243.27272727272725C250.2193045421314,244.23377262751328,250.39885704453786,235.34723387880055,271.17241379310343,232.78451178451178C291.945970541669,230.221789690223,293.9920207629052,224.0958498817696,313.0344827586207,232.78451178451178C332.0769447543361,241.47317368725396,334.5527513710622,276.107093537236,354.8965517241379,281.030303030303C375.24035207721363,285.95351252337,376.3124471842494,268.7282422520849,396.7586206896551,264.2491582491582C417.2047941950609,259.7700742462315,419.85606664586754,252.87805151395776,438.6206896551724,262.1515151515151C457.3853126644772,271.4249787890725,461.9561358755904,313.2429157985084,480.48275862068965,322.98316498316495C499.00938136578884,332.7234141678215,504.1805709550599,333.3835488970532,522.3448275862069,322.98316498316495C540.5090842173538,312.58278106927673,546.3086596490551,262.51508846949974,564.2068965517241,251.66329966329965C582.105133454393,240.8115108570995,585.2417425625122,251.64772008832657,606.0689655172414,249.56565656565652C626.8961884719705,247.48359304298648,631.5705165629723,256.3280579048783,647.9310344827586,243.27272727272725C664.2915524025449,230.21739664057623,668.9084640553108,137.6857831776717,689.7931034482758,136.29292929292924C710.6777428412408,134.90007540818678,723.1935107541743,192.66366944401506,731.655172413793,211.80808080808077C740.1168340734117,230.9524921721465,753.4270904024644,329.6958610269198,773.5172413793102,335.56902356902356C793.6073923561561,337.66666666666663,803.5843774810257,319.2979966343398,815.3793103448276,302.00673400673395C827.1742432086294,284.71547137912813,840.076077466318,179.73508038591473,857.2413793103448,167.75757575757572C874.4066811543715,155.78007112923672,881.8967238658574,157.937297912513,899.103448275862,169.85521885521882C916.3101726858665,181.77313979792467,923.1839138969013,255.30493615028294,940.9655172413793,266.3468013468013C958.7471205858571,277.3886665433197,965.572823572163,276.097422718583,982.8275862068965,264.2491582491582C1000.08234884163,252.40089377973342,1003.7654181400558,169.3218248806293,1024.6896551724137,169.85521885521882C1045.6138922047717,170.38861282980835,1048.4666187106495,268.3952424975126,1066.551724137931,278.93265993265993C1084.6368295652123,289.4700773678073,1091.7673129117288,285.3284225244413,1108.4137931034481,272.6397306397306C1125.0602732951675,259.9510387550199,1132.4497666986995,189.2156831490242,1150.2758620689654,178.24579124579122C1168.1019574392312,167.27589934255818,1172.115466365814,174.24350703974116,1192.1379310344828,180.3434343434343C1212.1603957031516,186.4433616471274,1234,205.51515151515147,1234,205.51515151515147L1234,337.66666666666663L20,337.66666666666663L20,281.030303030303" opacity="0.1"></path><path style="stroke-opacity: 1;" fill="none" stroke="#3ec7f5" d="M20,281.030303030303C20,281.030303030303,46.88893010393745,255.80085995451816,61.86206896551724,241.17508417508412C76.83520782709704,226.5493083956501,87.47408266479604,212.41479241770065,103.72413793103448,199.22222222222217C119.97419319727291,186.0296520267437,124.98759019968398,168.23732771214335,145.58620689655172,171.95286195286195C166.18482359341945,175.66839619358055,170.60744401147952,216.15964043530337,187.44827586206895,228.58922558922558C204.2891077126584,241.01881074314778,208.401385113041,242.31168191794123,229.3103448275862,243.27272727272725C250.2193045421314,244.23377262751328,250.39885704453786,235.34723387880055,271.17241379310343,232.78451178451178C291.945970541669,230.221789690223,293.9920207629052,224.0958498817696,313.0344827586207,232.78451178451178C332.0769447543361,241.47317368725396,334.5527513710622,276.107093537236,354.8965517241379,281.030303030303C375.24035207721363,285.95351252337,376.3124471842494,268.7282422520849,396.7586206896551,264.2491582491582C417.2047941950609,259.7700742462315,419.85606664586754,252.87805151395776,438.6206896551724,262.1515151515151C457.3853126644772,271.4249787890725,461.9561358755904,313.2429157985084,480.48275862068965,322.98316498316495C499.00938136578884,332.7234141678215,504.1805709550599,333.3835488970532,522.3448275862069,322.98316498316495C540.5090842173538,312.58278106927673,546.3086596490551,262.51508846949974,564.2068965517241,251.66329966329965C582.105133454393,240.8115108570995,585.2417425625122,251.64772008832657,606.0689655172414,249.56565656565652C626.8961884719705,247.48359304298648,631.5705165629723,256.3280579048783,647.9310344827586,243.27272727272725C664.2915524025449,230.21739664057623,668.9084640553108,137.6857831776717,689.7931034482758,136.29292929292924C710.6777428412408,134.90007540818678,723.1935107541743,192.66366944401506,731.655172413793,211.80808080808077C740.1168340734117,230.9524921721465,753.4270904024644,329.6958610269198,773.5172413793102,335.56902356902356C793.6073923561561,337.66666666666663,803.5843774810257,319.2979966343398,815.3793103448276,302.00673400673395C827.1742432086294,284.71547137912813,840.076077466318,179.73508038591473,857.2413793103448,167.75757575757572C874.4066811543715,155.78007112923672,881.8967238658574,157.937297912513,899.103448275862,169.85521885521882C916.3101726858665,181.77313979792467,923.1839138969013,255.30493615028294,940.9655172413793,266.3468013468013C958.7471205858571,277.3886665433197,965.572823572163,276.097422718583,982.8275862068965,264.2491582491582C1000.08234884163,252.40089377973342,1003.7654181400558,169.3218248806293,1024.6896551724137,169.85521885521882C1045.6138922047717,170.38861282980835,1048.4666187106495,268.3952424975126,1066.551724137931,278.93265993265993C1084.6368295652123,289.4700773678073,1091.7673129117288,285.3284225244413,1108.4137931034481,272.6397306397306C1125.0602732951675,259.9510387550199,1132.4497666986995,189.2156831490242,1150.2758620689654,178.24579124579122C1168.1019574392312,167.27589934255818,1172.115466365814,174.24350703974116,1192.1379310344828,180.3434343434343C1212.1603957031516,186.4433616471274,1234,205.51515151515147,1234,205.51515151515147" stroke-width="2" stroke-opacity="1"></path><rect x="20" y="130" width="1214" height="207.66666666666666" r="0" rx="0" ry="0" fill="#ff0000" stroke="none" style="opacity: 0;" opacity="0"></rect><image x="20" y="366" width="1214" height="50" preserveAspectRatio="none" xlink:href="/static/imgs/chart/tbg.png"></image><text style="text-anchor: start; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="20" y="375" text-anchor="start" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4.5">媒体指数</tspan></text><text style="text-anchor: end; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="1231" y="400" text-anchor="end" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">1</tspan></text><text style="text-anchor: end; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="1231" y="375" text-anchor="end" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2</tspan></text><path style="" fill="none" stroke="#f1f1f1" d="M20,390L1234,390M20,415L1234,415"></path><path style="stroke-opacity: 0.5;" fill="none" stroke="#3ec7f5" d="M20,415C20,415,40.93103448275862,415,61.86206896551724,415C82.79310344827586,415,82.79310344827586,415,103.72413793103448,415C124.6551724137931,415,124.6551724137931,415,145.58620689655172,415C166.51724137931035,415,166.51724137931035,415,187.44827586206895,415C208.37931034482756,415,208.37931034482756,415,229.3103448275862,415C250.24137931034483,415,250.99511413172723,415,271.17241379310343,415C291.3497134544796,409.43360234141875,292.1034482758621,390,313.0344827586207,390C333.9655172413793,390,333.9655172413793,415,354.8965517241379,415C375.8275862068965,415,376.5813210282789,395.56639765858125,396.7586206896551,390C416.9359203510313,384.43360234141875,418.4433899937962,384.43360234141875,438.6206896551724,390C458.7979893165486,395.56639765858125,460.30545895931346,409.43360234141875,480.48275862068965,415C500.66005828206585,415,501.41379310344826,415,522.3448275862069,415C543.2758620689655,415,543.2758620689655,415,564.2068965517241,415C585.1379310344828,415,585.1379310344828,415,606.0689655172414,415C627,415,627,415,647.9310344827586,415C668.8620689655172,415,669.6158037868996,415,689.7931034482758,415C709.970403109652,409.43360234141875,710.7241379310344,390,731.655172413793,390C752.5862068965516,390,753.339941717934,409.43360234141875,773.5172413793102,415C793.6945410406864,415,794.4482758620688,415,815.3793103448276,415C836.3103448275862,415,836.3103448275862,415,857.2413793103448,415C878.1724137931034,415,878.1724137931034,415,899.103448275862,415C920.0344827586207,415,920.0344827586207,415,940.9655172413793,415C961.8965517241379,415,961.8965517241379,415,982.8275862068965,415C1003.7586206896551,415,1003.7586206896551,415,1024.6896551724137,415C1045.6206896551723,415,1045.6206896551723,415,1066.551724137931,415C1087.4827586206895,415,1087.4827586206895,415,1108.4137931034481,415C1129.3448275862067,415,1129.3448275862067,415,1150.2758620689654,415C1171.2068965517242,415,1171.2068965517242,415,1192.1379310344828,415C1213.0689655172414,415,1234,415,1234,415" stroke-width="2" stroke-opacity="0.5"></path><path style="opacity: 1;" fill="#e0e0e0" stroke="none" d="M20,460M20,460L23.065656565656568,460L26.13131313131313,460L29.196969696969695,460L32.26262626262626,460L35.32828282828283,460L38.39393939393939,460L41.45959595959596,460L44.525252525252526,460L47.59090909090909,460L50.65656565656566,460L53.72222222222222,460L56.78787878787879,460L59.85353535353536,460L62.91919191919192,460L65.98484848484848,460L69.05050505050505,460L72.11616161616162,460L75.18181818181819,460L78.24747474747474,460L81.31313131313132,458.125L84.37878787878788,458.125L87.44444444444444,458.125L90.51010101010101,458.125L93.57575757575758,458.125L96.64141414141415,458.125L99.70707070707071,458.125L102.77272727272728,458.125L105.83838383838383,458.125L108.9040404040404,458.125L111.96969696969697,458.125L115.03535353535354,458.125L118.1010101010101,458.125L121.16666666666667,458.125L124.23232323232324,458.125L127.2979797979798,456.25L130.36363636363637,454.375L133.42929292929293,458.125L136.49494949494948,458.125L139.56060606060606,458.125L142.62626262626264,458.125L145.6919191919192,458.125L148.75757575757575,458.125L151.82323232323233,458.125L154.88888888888889,458.125L157.95454545454547,458.125L161.02020202020202,458.125L164.0858585858586,458.125L167.15151515151516,458.125L170.2171717171717,458.125L173.2828282828283,458.125L176.34848484848484,458.125L179.41414141414143,460L182.47979797979798,460L185.54545454545456,460L188.61111111111111,460L191.67676767676767,460L194.74242424242425,458.125L197.8080808080808,458.125L200.87373737373738,458.125L203.93939393939394,458.125L207.00505050505052,458.125L210.07070707070707,458.125L213.13636363636365,458.125L216.2020202020202,458.125L219.26767676767676,458.125L222.33333333333334,458.125L225.3989898989899,458.125L228.46464646464648,458.125L231.53030303030303,458.125L234.5959595959596,458.125L237.66161616161617,458.125L240.72727272727275,458.125L243.7929292929293,458.125L246.85858585858585,458.125L249.92424242424244,458.125L252.989898989899,458.125L256.05555555555554,458.125L259.1212121212121,456.25L262.1868686868687,456.25L265.2525252525253,456.25L268.3181818181818,456.25L271.3838383838384,458.125L274.4494949494949,458.125L277.5151515151515,458.125L280.5808080808081,458.125L283.64646464646466,458.125L286.71212121212125,458.125L289.77777777777777,458.125L292.84343434343435,458.125L295.90909090909093,458.125L298.97474747474746,458.125L302.04040404040404,458.125L305.1060606060606,458.125L308.1717171717172,458.125L311.23737373737373,458.125L314.3030303030303,458.125L317.3686868686869,458.125L320.4343434343434,458.125L323.5,458.125L326.5656565656566,458.125L329.63131313131316,458.125L332.6969696969697,458.125L335.76262626262627,458.125L338.82828282828285,458.125L341.8939393939394,458.125L344.95959595959596,456.25L348.02525252525254,456.25L351.0909090909091,458.125L354.15656565656565,458.125L357.22222222222223,458.125L360.2878787878788,458.125L363.35353535353534,456.25L366.4191919191919,456.25L369.4848484848485,456.25L372.5505050505051,456.25L375.6161616161616,456.25L378.6818181818182,456.25L381.74747474747477,456.25L384.81313131313135,456.25L387.8787878787879,458.125L390.94444444444446,458.125L394.01010101010104,456.25L397.07575757575756,458.125L400.14141414141415,456.25L403.2070707070707,456.25L406.2727272727273,456.25L409.33838383838383,456.25L412.4040404040404,456.25L415.469696969697,456.25L418.5353535353535,456.25L421.6010101010101,456.25L424.6666666666667,454.375L427.73232323232327,454.375L430.7979797979798,454.375L433.8636363636364,454.375L436.92929292929296,456.25L439.9949494949495,456.25L443.06060606060606,456.25L446.12626262626264,456.25L449.1919191919192,456.25L452.25757575757575,456.25L455.32323232323233,456.25L458.3888888888889,456.25L461.4545454545455,456.25L464.520202020202,456.25L467.5858585858586,458.125L470.6515151515152,458.125L473.7171717171717,458.125L476.7828282828283,458.125L479.8484848484849,458.125L482.91414141414145,458.125L485.979797979798,458.125L489.04545454545456,456.25L492.11111111111114,456.25L495.17676767676767,458.125L498.24242424242425,458.125L501.30808080808083,458.125L504.3737373737374,456.25L507.43939393939394,456.25L510.5050505050505,456.25L513.5707070707072,458.125L516.6363636363636,456.25L519.7020202020202,456.25L522.7676767676768,456.25L525.8333333333334,456.25L528.8989898989898,456.25L531.9646464646464,456.25L535.030303030303,456.25L538.0959595959596,456.25L541.1616161616162,456.25L544.2272727272727,456.25L547.2929292929293,456.25L550.3585858585859,456.25L553.4242424242425,456.25L556.489898989899,456.25L559.5555555555555,456.25L562.6212121212121,456.25L565.6868686868687,454.375L568.7525252525253,454.375L571.8181818181819,450.625L574.8838383838385,452.5L577.9494949494949,456.25L581.0151515151515,454.375L584.0808080808081,452.5L587.1464646464647,452.5L590.2121212121212,454.375L593.2777777777778,454.375L596.3434343434344,454.375L599.4090909090909,452.5L602.4747474747475,454.375L605.540404040404,454.375L608.6060606060606,456.25L611.6717171717172,456.25L614.7373737373738,456.25L617.8030303030304,456.25L620.8686868686868,456.25L623.9343434343434,456.25L627,456.25L630.0656565656566,456.25L633.1313131313132,456.25L636.1969696969697,456.25L639.2626262626263,456.25L642.3282828282828,456.25L645.3939393939394,456.25L648.459595959596,456.25L651.5252525252525,456.25L654.5909090909091,456.25L657.6565656565657,456.25L660.7222222222223,456.25L663.7878787878788,456.25L666.8535353535353,456.25L669.9191919191919,456.25L672.9848484848485,456.25L676.0505050505051,456.25L679.1161616161617,456.25L682.1818181818182,458.125L685.2474747474747,456.25L688.3131313131313,456.25L691.3787878787879,456.25L694.4444444444445,456.25L697.510101010101,456.25L700.5757575757576,456.25L703.6414141414142,456.25L706.7070707070707,456.25L709.7727272727273,456.25L712.8383838383838,456.25L715.9040404040404,456.25L718.969696969697,456.25L722.0353535353536,456.25L725.1010101010102,456.25L728.1666666666667,456.25L731.2323232323232,458.125L734.2979797979798,458.125L737.3636363636364,458.125L740.429292929293,458.125L743.4949494949495,458.125L746.5606060606061,458.125L749.6262626262627,456.25L752.6919191919192,456.25L755.7575757575758,456.25L758.8232323232323,456.25L761.8888888888889,456.25L764.9545454545455,456.25L768.0202020202021,456.25L771.0858585858587,456.25L774.1515151515151,456.25L777.2171717171717,458.125L780.2828282828283,458.125L783.3484848484849,458.125L786.4141414141415,458.125L789.479797979798,458.125L792.5454545454546,458.125L795.6111111111111,458.125L798.6767676767677,458.125L801.7424242424242,456.25L804.8080808080808,456.25L807.8737373737374,456.25L810.939393939394,456.25L814.0050505050506,456.25L817.070707070707,456.25L820.1363636363636,458.125L823.2020202020202,456.25L826.2676767676768,456.25L829.3333333333334,456.25L832.39898989899,458.125L835.4646464646465,458.125L838.530303030303,458.125L841.5959595959596,456.25L844.6616161616162,456.25L847.7272727272727,458.125L850.7929292929293,456.25L853.8585858585859,456.25L856.9242424242425,456.25L859.989898989899,456.25L863.0555555555555,458.125L866.1212121212121,458.125L869.1868686868687,458.125L872.2525252525253,458.125L875.3181818181819,458.125L878.3838383838385,458.125L881.4494949494949,456.25L884.5151515151515,456.25L887.5808080808081,456.25L890.6464646464647,456.25L893.7121212121212,456.25L896.7777777777778,456.25L899.8434343434344,456.25L902.909090909091,456.25L905.9747474747475,456.25L909.040404040404,456.25L912.1060606060606,456.25L915.1717171717172,456.25L918.2373737373738,456.25L921.3030303030304,458.125L924.368686868687,458.125L927.4343434343434,458.125L930.5,458.125L933.5656565656566,458.125L936.6313131313132,458.125L939.6969696969697,458.125L942.7626262626263,458.125L945.8282828282829,458.125L948.8939393939394,458.125L951.959595959596,458.125L955.0252525252525,458.125L958.0909090909091,460L961.1565656565657,458.125L964.2222222222223,458.125L967.2878787878789,458.125L970.3535353535353,458.125L973.4191919191919,458.125L976.4848484848485,458.125L979.5505050505051,458.125L982.6161616161617,458.125L985.6818181818182,458.125L988.7474747474748,458.125L991.8131313131313,460L994.8787878787879,458.125L997.9444444444445,458.125L1001.010101010101,458.125L1004.0757575757576,458.125L1007.1414141414142,446.875L1010.2070707070708,430L1013.2727272727273,450.625L1016.3383838383838,456.25L1019.4040404040404,458.125L1022.469696969697,458.125L1025.5353535353536,458.125L1028.6010101010102,458.125L1031.6666666666667,458.125L1034.7323232323233,458.125L1037.7979797979797,458.125L1040.8636363636365,458.125L1043.9292929292928,458.125L1046.9949494949494,458.125L1050.060606060606,458.125L1053.1262626262626,458.125L1056.1919191919192,458.125L1059.2575757575758,458.125L1062.3232323232323,458.125L1065.388888888889,458.125L1068.4545454545455,458.125L1071.520202020202,458.125L1074.5858585858587,458.125L1077.6515151515152,458.125L1080.7171717171718,458.125L1083.7828282828284,458.125L1086.848484848485,458.125L1089.9141414141413,458.125L1092.979797979798,458.125L1096.0454545454545,458.125L1099.111111111111,458.125L1102.1767676767677,458.125L1105.2424242424242,458.125L1108.3080808080808,460L1111.3737373737374,460L1114.439393939394,460L1117.5050505050506,460L1120.5707070707072,458.125L1123.6363636363637,460L1126.7020202020203,458.125L1129.767676767677,458.125L1132.8333333333333,458.125L1135.8989898989898,458.125L1138.9646464646464,458.125L1142.030303030303,460L1145.0959595959596,460L1148.1616161616162,458.125L1151.2272727272727,460L1154.2929292929293,460L1157.358585858586,460L1160.4242424242425,460L1163.489898989899,458.125L1166.5555555555557,458.125L1169.6212121212122,460L1172.6868686868688,458.125L1175.7525252525252,460L1178.8181818181818,460L1181.8838383838383,460L1184.949494949495,460L1188.0151515151515,460L1191.080808080808,460L1194.1464646464647,460L1197.2121212121212,460L1200.2777777777778,460L1203.3434343434344,460L1206.409090909091,460L1209.4747474747476,458.125L1212.5404040404042,460L1215.6060606060607,460L1218.6717171717173,460L1221.7373737373737,460L1224.8030303030303,458.125L1227.8686868686868,460L1230.9343434343434,458.125L1234,458.125L1234,460L20,460" opacity="1"></path><text style="text-anchor: start; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="20" y="445" text-anchor="start" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2011</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="179.7599421547361" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2012</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="339.9587852494577" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2013</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="500.15762834417933" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2014</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="660.3564714389009" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2015</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="820.5553145336225" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2016</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="980.7541576283442" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2017</tspan></text><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="1140.9530007230658" y="445" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#9a9a9a"><tspan dy="4">2018</tspan></text><path style="" fill="none" stroke="#999999" d="M20,430L20,460M1234,430L1234,460M20,460L1234,460M126.36032778982889,455L126.36032778982889,460M72.96071342492168,455L72.96071342492168,460M179.7599421547361,452L179.7599421547361,460M233.15955651964333,455L233.15955651964333,460M286.55917088455055,455L286.55917088455055,460M339.9587852494577,452L339.9587852494577,460M393.35839961436494,455L393.35839961436494,460M446.75801397927216,455L446.75801397927216,460M500.15762834417933,452L500.15762834417933,460M553.5572427090865,455L553.5572427090865,460M606.9568570739938,455L606.9568570739938,460M660.3564714389009,452L660.3564714389009,460M713.7560858038081,455L713.7560858038081,460M767.1557001687154,455L767.1557001687154,460M820.5553145336225,452L820.5553145336225,460M873.9549288985297,455L873.9549288985297,460M927.354543263437,455L927.354543263437,460M980.7541576283442,452L980.7541576283442,460M1034.1537719932514,455L1034.1537719932514,460M1087.5533863581586,455L1087.5533863581586,460M1140.9530007230658,452L1140.9530007230658,460M1194.352615087973,455L1194.352615087973,460"></path><rect x="1221.2856626941134" y="430" width="12.714337305886602" height="30" r="0" rx="0" ry="0" fill="#90c5ed" stroke="none" style="opacity: 0.5; cursor: e-resize;" opacity="0.5"></rect><image x="1216.2856626941134" y="430" width="8" height="30" preserveAspectRatio="none" xlink:href="/static/imgs/chart/zoomhander.png" style="cursor: e-resize;"></image><image x="1229" y="430" width="8" height="30" preserveAspectRatio="none" xlink:href="/static/imgs/chart/zoomhander.png" style="cursor: e-resize;"></image><path style="" fill="none" stroke="#4284e2" d="M20,430L1221.2856626941134,430"></path><path style="" fill="none" stroke="#4284e2" d="M1233,430L1234,430"></path><path style="" fill="none" stroke="#4284e2" d="M1221.2856626941134,460L1234,460"></path><rect x="307.0344827586207" y="214.78451178451178" width="13" height="13" r="0" rx="0" ry="0" fill="#3ec7f5" stroke="none" style="opacity: 0;" opacity="0"></rect><path style="" fill="none" stroke="#3ec7f5" d="M313.0344827586207,232.78451178451178L313.0344827586207,227.78451178451178"></path><text style="text-anchor: middle; font: 12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;;" x="313.0344827586207" y="220.78451178451178" text-anchor="middle" font="12px &quot;Arial&quot;, &quot;Microsoft Yahei&quot;" stroke="none" fill="#3ec7f5"><tspan dy="3.9999964036524034">A</tspan></text><rect x="307.0344827586207" y="214.78451178451178" width="13" height="13" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="cursor: pointer; opacity: 0;" opacity="0"></rect></svg></div>
+    </div>
+    <div id="trendBarVal" class="tipopWords barAvgVal" style="display:none;">
+        <div class="contentWord"></div>
+        <div class="showPoint">
+            <div class="arrBorder"></div>
+            <div class="arrContent"></div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+            <div class="ftc"></div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="mw1000">
+        <table>
+            <tbody><tr>
+                <td width="25%">
+                    <h4><a href="/Helper/?tpl=help&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE">帮助</a></h4>
+                    <ul>
+                        <li><a href="/Helper/?tpl=help&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE#pdesc">产品简介</a></li>
+                        <li><a href="/Helper/?tpl=help&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE#h2use">使用方法</a></li>
+                        <li><a href="/Helper/?tpl=help&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE#wmean">名词解释</a></li>
+                        <li><a href="/Helper/?tpl=help&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE#mdesc">模块简介</a></li>
+                    </ul>
+                </td>
+                <td width="25%">
+                    <h4>相关数据服务</h4>
+                    <ul>
+                        <li><a target="_blank" href="http://vip.index.baidu.com/new">百度指数专业版</a></li>
+                        <li><a target="_blank" href="https://yingxiao.baidu.com/?ly=bdzs">百度营销中心</a></li>
+                    </ul>
+                </td>
+                <td width="25%">
+                    <h4>关注我们</h4>
+                    <ul class="attention-content">
+                        <li class="attention-weixin">
+                            <a class="icon"></a>
+                            <div class="attention-qrt">
+                                <img src="/static/Helper/topic/images/index-qrt.png">
+                            </div>
+                        </li>
+                        <li class="attention-sina"><a class="icon" target="_blank" href="http://weibo.com/indexprobaidu"></a></li>
+                    </ul>
+                </td>
+                <td width="25%"></td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <p class="copyright">
+        ©2018&nbsp;Baidu&nbsp;
+        <a target="_blank" href="/Helper/?tpl=duty">使用百度指数前必读</a>
+        &nbsp;&nbsp;
+        <a target="_blank" href="/Helper/?tpl=copyright">百度指数版权声明</a>
+        &nbsp;京ICP证030173号&nbsp;
+
+        <a class="link-to-wise" target="_blank" href="http://index.baidu.com/baidu-index-mobile/">手机版</a>
+    </p>
+
+</div>
+
+
+
+
+
+<div id="rTools" style="right: 261.5px; top: 743px;">
+    <div class="share">
+        <div id="bdshare" class="bdshareBox bdshare_t bds_tools get-codes-bdshare" style="position:absolute;width:100%;height:100%;background-image:url(about:blank);" onclick="bdShare._setPopData(T(this).attr('data'));" data="{&quot;title&quot;:&quot;分享百度指数&quot;,&quot;bdText&quot;:&quot;我是数据科学家啦！在@百度指数，可以研究关键词搜索趋势、洞察网民兴趣和需求、监测舆情动向、定位受众特征；还可以从行业的角度，分析市场特点。让我们一起探索大数据之美吧～&quot;,&quot;searchPic&quot;:&quot;&quot;,&quot;bdMini&quot;:&quot;2&quot;}">
+            <a href="#" class="popup_more" data-cmd="more" style="display:block;width:100%;height:100%;background:none;"></a>
+        </div>
+        <a class="rTahref shareicon" target="_blank" href="javascript:void(0)"><i class="icons"></i><span>分享</span></a>
+    </div>
+
+            <a id="setFavBtn" class="rTahref setFav" title="点击加入收藏" href="javascript:;" onclick="BID.addFavWords()"><i class="icons"></i><span>收藏</span></a>
+    
+    <a class="rTahref help" target="_blank" href="/Helper/?tpl=help&amp;word=%BA%AB%B9%FA%C2%C3%D3%CE"><i class="icons"></i><span>帮助</span></a>
+    <!-- <a class="rTahref contact" href="javascript:;" title="在线客服" onclick="BID.showKeFu()"><i class="icons"></i><span>客服</span></a> -->
+    <!-- <a class="rTahref contact" target="_blank" href="/Helper/?tpl=contact&word=%BA%AB%B9%FA%C2%C3%D3%CE"><i class="icons"></i><span>反馈</span></a> -->
+    <a class="rTahref toTop" style="display:none;" href="javascript:window.scrollTo(0, 0);"><i class="icons"></i><span>顶部</span></a>
+</div>
+<div id="tools-kefu">
+    <!-- <iframe src="https://ikefu.baidu.com/widget/?token=zhishu" style="width:322px;height:486px;border:0;overflow:hidden;"></iframe> -->
+    <script id="yyWidget" type="text/javascript" src="//ikefu.baidu.com/widget/widget.js?token=zhishu&amp;config=%7B%22eUrl%22%3A%22%2fstatic%2fimgs%2fkefu.png%22%2C%22eR%22%3A10%2C%22eB%22%3A30%2C%22eH%22%3A40%2C%22eW%22%3A40%7D"></script><link href="https://ikefu.baidu.com/static/widget/widget.css" rel="stylesheet"><div id="yeyingKefuWidget"><div class="yy-content" style="right: 261.5px; bottom: auto; top: 708px;"><div id="wHeader" class="w-header"><div id="wTitle"><img src="/static/imgs/kefu.png" style="height: 40px;width: 40px;"></div></div><div id="wBody" class="w-body" style="display: none;"></div></div><div id="yyImgZoom" class="img-zoom"><div class="table-row"><div id="yyImgBox" class="img-box"></div></div></div></div>
+</div>
+<style>
+    .bdshare_popup_box{left:auto!important;right:10px;}
+    .entry-wenjuan {
+        position: fixed;
+        right: 20px;
+        top: 150px;
+        z-index: 2000;
+        width: 60px;
+        height: 63px;
+    }
+    .icon-wj {
+        display: block;
+        text-decoration: none;
+        width: 48px;
+        height: 63px;
+        background: url(/static/imgs/icon-wenjuan.png) no-repeat center center;
+        background-size: 48px 63px;
+    }
+    .close-wj {
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        background: url(/static/imgs/icon-close.svg) no-repeat center center;
+        background-size: 12px 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .close-wj:hover {
+        opacity: 0.8;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+    
+
+                    
+    
+        <script type="text/javascript" src="/static/js/raphael.js" charset="UTF-8"></script>
+
+
+
+
+
+
+                        
+    
+        <script type="text/javascript" src="/static/js/lib.js?a0726"></script>
+<script type="text/javascript" src="/static/js/funs.js?a0726"></script>
+<script type="text/javascript" src="/static/js/index_graphic_lib.js?a0726"></script>
+<script type="text/javascript" src="/static/js/index_graphic_key.js?a0726"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    BID.fnsDate.adjust = (PPval.ppt = 'MXASLRYKHQ9XfxIlFyQGQXEIJh0dCyIHdQQIYnchBz1KN1grVB0AcWcCKysAITI8NVJ5KV0qGHgiQxMVTzASYDE6AhYcCh0uCFs1UFl3E10WOz9DMgomcX1jZTFxTBFEdAgJCFxhRUJXACcidHYAdTkBQANrS3YaGXBpdwUOQAJhfRQWQTkEFgdIfkRREhQFSyIEUSk6ByM5LEMMM3Y%2FGRcdXQNzPDENIwMpBywDUScjLjUNcCNwdV8%2FQBMDYiQAIygWJVl5A0kcUAEkVQAxRAIxXnkpOgdCORA%3D', PPval.status = '0' || '0', PPval.adjust);
+    if(PPval.status == '301'){BID.vVerify();}
+    </script>
+
+
+
+
+<script type="text/javascript">
+T(function () {
+            BID.res2(/\//);
+    
+    
+                BID.scroll_resize();
+
+                    BID.placehold('#schword', {cssText: 'padding:9px 40px;color:#d8d8d8;font-size:14px;_padding-top:8px;'});
+
+BID.newSuggestion('schword', {onconfirm: function (e, o) {
+    var word = T.string(o.data).trim();
+    if(!word){return;}
+    T('#schfm').submit();
+}});
+
+
+                    T('#pas_regLink').each(function () {
+    this.href = this.href.split('&')[0] + '&u=' + encodeURIComponent(location.href);
+});
+T('#userbar a.cas_logout').each(function () {
+    this.href = this.href.split('&')[0] + '&u=' + encodeURIComponent(PPval.hostUrl + PPval.routeUrl);
+});
+
+                     EbGDCxTu = 'EFQlttCjtUZiICj1bLzAcw03YLNMyDlrWA8WNxENndx4dqygA4';
+ rFS = EbGDCxTu.split('').reverse().join('');
+                        BID.crAdvPannel();
+    BID.fillAdvPannel();
+    BID.splitWord();
+
+                     OCk = Raphael(-500, -500, 200, 200).path('M30,48R84,33 70,25 31,46 78,27 39,37 24,84 66,75').getPointAtLength(185).alpha.toFixed(3) + rFS;
+            
+    
+                    T(function () {
+            BID.dataBanner('trend', '', function (data, items) {
+    if(!data || !data.length){return;}
+    BID.crCarousel(T('#banner_trend').show()[0], items);
+});
+
+
+var tabnames = $('#compTab li.tabLi > span');
+BID.evts.care('compTab_tabClick', function (index) {
+    $('#currentTabKey').text(index === 0 ? '按关键词' : '按地域');
+})('compTab_tabClick', document.getElementById('compTab'), 0);
+
+if ( $('#compTab li.curr').index() === 1 ) {
+    $('#currentTabKey').text('地域');
+} 
+
+
+        });
+                    T(function () {
+            BID.tProfile && BID.tProfile.init('trendProfile');
+
+        });
+                    T(function () {
+            var snapshot = {
+    show_share: 0 + 1,
+    cur:        "all",
+    usertime1:  "",
+    usertime2:  "",
+    topline:    "",
+    meanline:   "",
+    forecast:   "",
+    isarea:     "false"
+};
+
+//参数验证
+snapshot.cur = {'pc': 'pc', 'wise': 'wise'}[snapshot.cur] || 'all';
+snapshot.topline = false;
+snapshot.meanline = false;
+snapshot.forecast = {'disable': 'disable', 'true': true}[snapshot.forecast] || false;
+if (snapshot.isarea === 'true' && BID.getParams().type == '1') {
+    snapshot.isarea = true;
+} else {
+    snapshot.isarea = false;
+}
+
+trendChartInit && trendChartInit(snapshot);
+
+        });
+                    T(function () {
+            BID.rTools_pos('rTools');
+
+
+        });
+                         cUa = OCk.slice(0, 2) + 'EXSTR' + OCk.slice(2);
+                T(function () {
+            BID.dataBanner('header', '', function (data, items) {
+    if(!data || !data.length){return;}
+    BID.crCarousel(T('#banner_header').show()[0], items);
+});
+
+        });
+    
+                         vudKD = cUa + cUa.slice(0, 2);
+                    var MDmP = Raphael(-500, -500, 200, 200).path('M15,71R53,44,95,95,88,30,30,17,17,95').getPointAtLength(125).alpha.toFixed(3) + cUa;
+            
+            BID.res2(vudKD);
+        BID.res2(cUa);
+    });
+</script>
+
+
+
+
+
+    <script type="text/javascript" src="//hm.baidu.com/h.js?d101ea4d2a5c67dab98251f0b5de24dc"></script>
+    
+            <style>
+            #bdshare a{padding-top:4px;padding-bottom:4px;}
+            #bdshare a.popup_more{background-position:0px 5px;width:45px;margin-right:0;}
+            #bdshare_pop ul li{margin-right:-2px;}
+            .bdshareBds{height:30px;}
+            .bdsPreview{text-align:center;}
+            .bdsPreview .prvImg{width:240px;}
+            .bdsPreview .infLabel{padding:20px 0 80px 0;}
+        </style>
+        <div style="display:none;">
+            <div id="bdsBlockImg">
+                <div class="bdshareBds">
+                    <div id="bdshare" class="bdshareBox bdshare_t bds_tools get-codes-bdshare" onclick="bdShare._setPopData(T(this).attr('data'));">
+                        <span style="float:left;padding-top:5px;padding-left:20px;">分享到：</span>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_tieba bdtb" title="分享到百度贴吧"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="popup_more" data-cmd="more">更多...</a>
+                    </div>
+                </div>
+                <div class="bdsPreview"></div>
+            </div>
+            <form id="bdsDownLoad" method="post" action="" target="bdsDLiframe"></form>
+            <iframe name="bdsDLiframe" id="bdsDLiframe"></iframe>
+        </div>
+        <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=655757" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=425890"></script>
+        
+        <script type="text/javascript">
+            var bdShare = window.bdShare || {};
+            bdShare._baseConfig = {
+                "title": "分享百度指数",
+                "bdText": "我是数据科学家啦！在@百度指数，可以研究关键词搜索趋势、洞察网民兴趣和需求、监测舆情动向、定位受众特征；还可以从行业的角度，分析市场特点。让我们一起探索大数据之美吧～",
+                "searchPic": "",
+                "bdMini": "2"
+            };
+            bdShare._getConfig = function (opts) {
+                opts = opts || {};
+                for (var k in bdShare._baseConfig) {
+                    if (!opts[k]) {opts[k] = bdShare._baseConfig[k];}
+                }
+                return opts;
+            };
+            bdShare._getStrData = function (opts) {
+                return T.json.stringify(bdShare._getConfig(opts));
+            };
+            bdShare._setPopData = function (strData) {//更多分享弹出框 设置data属性
+                var pop = T('#bdshare_pop');
+                if (!pop.length) {
+                    pop = null;
+                    setTimeout(function () {bdShare._setPopData(strData);}, 50);
+                } else {
+                    pop.attr('data', strData);
+                }
+            };
+            var bds_config = bdShare._getConfig();
+            T('#rTools .bdshareBox').attr('data', bdShare._getStrData());
+            document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + (new Date / 36e5 | 0);
+        </script>
+    
+
+
+
+
+
+
+
+
+
+<script> var _trace_page_logid = 0778777654; </script><svg height="200" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: absolute; left: -500px; top: -500px;"><desc>Created with Raphaël 2.1.0</desc><defs></defs><path style="" fill="none" stroke="#000000" d="M30,48C39,45.5,77.33333333333333,36.833333333333336,84,33C90.66666666666667,29.166666666666668,78.83333333333333,22.833333333333332,70,25C61.166666666666664,27.166666666666668,29.666666666666668,45.666666666666664,31,46C32.333333333333336,46.333333333333336,76.66666666666667,28.5,78,27C79.33333333333333,25.5,48,27.5,39,37C30,46.5,19.5,77.66666666666667,24,84C28.5,90.33333333333333,59,76.5,66,75"></path></svg><svg height="200" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: absolute; left: -500px; top: -500px;"><desc>Created with Raphaël 2.1.0</desc><defs></defs><path style="" fill="none" stroke="#000000" d="M15,71C21.333333333333332,66.5,39.666666666666664,40,53,44C66.33333333333333,48,89.16666666666667,97.33333333333333,95,95C100.83333333333333,92.66666666666667,98.83333333333333,43,88,30C77.16666666666667,17,41.833333333333336,6.166666666666667,30,17C18.166666666666668,27.833333333333332,19.166666666666668,82,17,95"></path></svg></body></html>
